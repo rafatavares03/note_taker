@@ -8,15 +8,36 @@ function TheTableIsEmpty() {
         messageTag.appendChild(messageText);
         NotesArea.appendChild(messageTag);
     } else if (NotesArea.firstChild.id === "emptyMessage") {
-        NotesArea.removeChilg(NotesArea.firstChild);
+        NotesArea.removeChild(NotesArea.firstChild);
     }
 }
 
 TheTableIsEmpty();
 
+function createViewButton() {
+    const button = document.createElement('input');
+    button.type = "button";
+    button.value = "View Detail";
+    return button;
+}
+
 document.querySelector('#submitNote').addEventListener('click', function submitNote() {
     const note = document.querySelector('#note').value;
     if(note !== '') {
+        TheTableIsEmpty();
+        const noteArea = document.createElement('div');
+        const noteTitle = document.createElement('h1');
+        const noteParagraph = document.createElement('p');
+        const noteText = document.createTextNode(note);
+        const titleText = document.createTextNode('Note');
+        const viewButton = createViewButton();
+        noteArea.class = 'note';
+        noteTitle.appendChild(titleText);
+        noteParagraph.appendChild(noteText);
+        noteArea.appendChild(noteTitle);
+        noteArea.appendChild(noteParagraph);
+        noteArea.appendChild(viewButton);
+        NotesArea.appendChild(noteArea);
 
     } else {
         window.alert('Write some note to submit!')
