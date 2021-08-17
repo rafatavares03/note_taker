@@ -13,3 +13,12 @@ function TheTableIsEmpty() {
 }
 
 TheTableIsEmpty();
+
+document.querySelector('#submitNote').addEventListener('click', function submitNote() {
+    const note = document.querySelector('#note').value;
+    if(note !== '') {
+
+    } else {
+        window.alert('Write some note to submit!')
+    }
+});
