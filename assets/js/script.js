@@ -14,10 +14,17 @@ function TheTableIsEmpty() {
 
 TheTableIsEmpty();
 
-function createViewButton() {
+function createViewButton(text) {
     const button = document.createElement('input');
     button.type = "button";
     button.value = "View Detail";
+    button.onclick = () => {
+        const modal = document.querySelector('#modal-popup');
+        const note = document.querySelector('#modal-content');
+        const textNote = document.createTextNode(text);
+        note.appendChild(textNote);
+        modal.style.visibility = "visible";
+    }
     return button;
 }
 
@@ -30,7 +37,7 @@ document.querySelector('#submitNote').addEventListener('click', function submitN
         const noteParagraph = document.createElement('p');
         const noteText = document.createTextNode(note);
         const titleText = document.createTextNode('Note');
-        const viewButton = createViewButton();
+        const viewButton = createViewButton(note);
         noteArea.class = 'note';
         noteTitle.appendChild(titleText);
         noteParagraph.appendChild(noteText);
