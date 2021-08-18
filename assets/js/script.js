@@ -1,4 +1,6 @@
 const NotesArea = document.querySelector('#notesArea');
+const modal = document.querySelector('#modal-popup');
+const modalContent = document.querySelector('#modal-content');
 
 function TheTableIsEmpty() {
     if (NotesArea.childNodes.length === 0) {
@@ -19,11 +21,9 @@ function createViewButton(text) {
     button.type = "button";
     button.value = "View Detail";
     button.onclick = () => {
-        const modal = document.querySelector('#modal-popup');
-        const note = document.querySelector('#modal-content');
         const textNote = document.createTextNode(text);
-        note.appendChild(textNote);
-        modal.style.visibility = "visible";
+        modalContent.appendChild(textNote);
+        modal.classList.add("isVisible");
     }
     return button;
 }
@@ -46,7 +46,14 @@ document.querySelector('#submitNote').addEventListener('click', function submitN
         noteArea.appendChild(viewButton);
         NotesArea.appendChild(noteArea);
 
+        const noteInput = document.querySelector('#note');
+        noteInput.value = '';
     } else {
         window.alert('Write some note to submit!')
     }
+});
+
+document.querySelector('#closePop-Up').addEventListener('click', () => {
+    modalContent.removeChild(modalContent.firstChild);
+    modal.classList.remove("isVisible");
 });
