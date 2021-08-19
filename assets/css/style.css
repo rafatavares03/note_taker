@@ -1,9 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+body {
+    font-family: 'arimo', sans-serif;
+    height: 100vh;
+    background-color: #17700D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border: solid 5px #ddd;
+    border-radius: 1px;
+}
+
+.container > h1 {
+    font-weight: 600;
+}
+
+.container p {
+    font-style: italic;
+    margin: 10px 0px  15px 0px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form > textarea {
+    outline: 0;
+    resize: none;
+    width: 500px;
+    height: 100px;
+}
 
 
 
