@@ -36,7 +36,7 @@ document.querySelector('#submitNote').addEventListener('click', function submitN
         const noteTitle = document.createElement('h1');
         const noteParagraph = document.createElement('p');
         const noteText = document.createTextNode(note);
-        const titleText = document.createTextNode('Note');
+        const titleText = document.createTextNode('Note ' + (NotesArea.childNodes.length + 1));
         const viewButton = createViewButton(note);
         noteArea.class = 'note';
         noteTitle.appendChild(titleText);
@@ -60,6 +60,13 @@ document.querySelector('#closePop-Up').addEventListener('click', () => {
 
 document.addEventListener('click', (e) => {
     if (e.target === document.querySelector('.modal.isVisible')) {
+        modalContent.removeChild(modalContent.firstChild);
+        modal.classList.remove('isVisible');
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === "Escape" && document.querySelector('.modal.isVisible')) {
         modalContent.removeChild(modalContent.firstChild);
         modal.classList.remove('isVisible');
     }
