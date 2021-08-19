@@ -57,3 +57,10 @@ document.querySelector('#closePop-Up').addEventListener('click', () => {
     modalContent.removeChild(modalContent.firstChild);
     modal.classList.remove("isVisible");
 });
+
+document.addEventListener('click', (e) => {
+    if (e.target === document.querySelector('.modal.isVisible')) {
+        modalContent.removeChild(modalContent.firstChild);
+        modal.classList.remove('isVisible');
+    }
+});
