@@ -6,7 +6,7 @@ function TheTableIsEmpty() {
     if (NotesArea.childNodes.length === 0) {
         const messageText = document.createTextNode(`You haven't added a note yet!`);
         const messageTag = document.createElement('p');
-        messageTag.id = "emptyMessage"
+        messageTag.id = "emptyMessage";
         messageTag.appendChild(messageText);
         NotesArea.appendChild(messageTag);
     } else if (NotesArea.firstChild.id === "emptyMessage") {
@@ -20,9 +20,9 @@ function createViewButton(text) {
     const button = document.createElement('input');
     button.type = "button";
     button.value = "View Detail";
+    button.classList.add("button");
     button.onclick = () => {
-        const textNote = document.createTextNode(text);
-        modalContent.appendChild(textNote);
+        modalContent.innerHTML = text;
         modal.classList.add("isVisible");
     }
     return button;
@@ -38,7 +38,7 @@ document.querySelector('#submitNote').addEventListener('click', function submitN
         const noteText = document.createTextNode(note);
         const titleText = document.createTextNode('Note ' + (NotesArea.childNodes.length + 1));
         const viewButton = createViewButton(note);
-        noteArea.class = 'note';
+        noteArea.classList.add('note');
         noteTitle.appendChild(titleText);
         noteParagraph.appendChild(noteText);
         noteArea.appendChild(noteTitle);
