@@ -40,10 +40,16 @@ body {
 }
 
 .form > textarea {
+    background-color: #ddd;
     outline: 0;
     resize: none;
     width: 500px;
     height: 100px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    overflow-y: auto;
+    border: double 2px #000;
 }
 
 
