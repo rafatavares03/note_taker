@@ -1,0 +1,5 @@
+@use '../abstract' as abs;
+
+.container {
+    @include abs.flex-box($direction: column);
+}
