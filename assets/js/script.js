@@ -2,7 +2,7 @@ const NotesArea = document.querySelector('#notesArea');
 const modal = document.querySelector('#modal-popup');
 const modalContent = document.querySelector('#modal-content');
 
-function TheTableIsEmpty() {
+function NoteAreaIsEmpty() {
     if (NotesArea.childNodes.length === 0) {
         const messageText = document.createTextNode(`You haven't added a note yet!`);
         const messageTag = document.createElement('p');
@@ -14,7 +14,7 @@ function TheTableIsEmpty() {
     }
 }
 
-TheTableIsEmpty();
+NoteAreaIsEmpty();
 
 function createViewButton(text) {
     const button = document.createElement('input');
@@ -28,28 +28,38 @@ function createViewButton(text) {
     return button;
 }
 
+function createNote(note) {
+    const noteArea = document.createElement('div');
+    const noteTitle = document.createElement('h1');
+    const noteParagraph = document.createElement('p');
+    const noteText = document.createTextNode(note);
+    const titleText = document.createTextNode('Note ' + (NotesArea.childNodes.length + 1));
+    const viewButton = createViewButton(note);
+
+
+    noteArea.classList.add('note');
+    noteTitle.appendChild(titleText);
+    noteParagraph.appendChild(noteText);
+    noteArea.appendChild(noteTitle);
+    noteArea.appendChild(noteParagraph);
+    noteArea.appendChild(viewButton);
+    NotesArea.appendChild(noteArea);
+    
+    
+    const noteInput = document.querySelector('#note');
+    noteInput.value = '';
+}
+
+
+
+
 document.querySelector('#submitNote').addEventListener('click', function submitNote() {
     const note = document.querySelector('#note').value;
     if(note !== '') {
-        TheTableIsEmpty();
-        const noteArea = document.createElement('div');
-        const noteTitle = document.createElement('h1');
-        const noteParagraph = document.createElement('p');
-        const noteText = document.createTextNode(note);
-        const titleText = document.createTextNode('Note ' + (NotesArea.childNodes.length + 1));
-        const viewButton = createViewButton(note);
-        noteArea.classList.add('note');
-        noteTitle.appendChild(titleText);
-        noteParagraph.appendChild(noteText);
-        noteArea.appendChild(noteTitle);
-        noteArea.appendChild(noteParagraph);
-        noteArea.appendChild(viewButton);
-        NotesArea.appendChild(noteArea);
-
-        const noteInput = document.querySelector('#note');
-        noteInput.value = '';
+        NoteAreaIsEmpty();
+        createNote(note);
     } else {
-        window.alert('Write some note to submit!')
+        window.alert('Write some note to submit!');
     }
 });
 
