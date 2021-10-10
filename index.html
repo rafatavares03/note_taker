@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <title>Note Taker</title>
 </head>
 <body>
-    <section class="container">
-        <h1>Note Taker</h1>
-        <p>Add a note below!</p>
-        <form class="form">
-            <textarea id="note"></textarea>
-            <input type="button" id="submitNote" class="button" value="Submit">
-        </form>
-        <div class="notesArea" id="notesArea"></div>
-    </section>
-    <section class="modal" id="modal-popup">
-        <div class="modal-container">
-            <header class="modal-header">
-                <input type="button" id="closePop-Up" value="&#10006;">
-            </header>
-            <p id="modal-content"></p>
-        </div>
-    </section>
+    <main>
+        <section class="container">
+            <h1>Note Taker</h1>
+            <p>Add a note below!</p>
+            <form class="form">
+                <textarea id="note"></textarea>
+                <input type="button" id="submitNote" class="button" value="Submit">
+            </form>
+            <div class="notesArea" id="notesArea"></div>
+        </section>
+        <section class="modal" id="modal-popup">
+            <div class="modal-container">
+                <header class="modal-header">
+                    <input type="button" id="closePop-Up" value="&#10006;">
+                </header>
+                <p id="modal-content"></p>
+            </div>
+        </section>
+    </main>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
