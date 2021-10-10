@@ -8,12 +8,31 @@
     left: 0;
     right: 0;
     background-color: abs.$transparent-black;
+    cursor: pointer;
+    visibility: hidden;
 
     .modal-container {
-        height: 90%;
-        width: 95%;
+        height: 85%;
+        width: 85%;
         background-color: abs.$white;
         padding: 20px;
         overflow-y: auto;
+        overflow-wrap: break-word;
     }
+
+    .modal-header {
+        @include abs.flex-box($justify: flex-end);
+        margin-bottom: 10px;
+    }
+
+    #closePop-Up {
+        font-size: 18px;
+        padding: 0px 10px;
+        border: 0;
+        background-color: abs.$white;
+    }
+}
+
+.modal.isVisible {
+    visibility: visible;
 }

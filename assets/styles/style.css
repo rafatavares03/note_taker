@@ -21,13 +21,33 @@ body {
   left: 0;
   right: 0;
   background-color: #0008;
+  cursor: pointer;
+  visibility: hidden;
 }
 .modal .modal-container {
-  height: 90%;
-  width: 95%;
+  height: 85%;
+  width: 85%;
   background-color: #fff;
   padding: 20px;
   overflow-y: auto;
+  overflow-wrap: break-word;
+}
+.modal .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modal #closePop-Up {
+  font-size: 18px;
+  padding: 0px 10px;
+  border: 0;
+  background-color: #fff;
+}
+
+.modal.isVisible {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */
