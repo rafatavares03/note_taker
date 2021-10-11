@@ -1,0 +1,19 @@
+@use '../abstract' as abs;
+
+.note {
+    display: inline-block;
+    width: 150px;
+    height: 125px;
+    padding: 3px;
+    background-color: abs.$dark-grey;
+    color: abs.$white;
+    box-shadow: abs.$notes-shadow;
+
+    p {
+        width: 100%;
+        height: 60px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow: hidden;
+    }
+}

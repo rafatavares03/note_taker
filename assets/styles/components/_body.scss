@@ -1,5 +1,7 @@
 @use '../abstract' as abs;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +9,9 @@
 }
 
 body {
-    background-color: abs.$light-yellow;
+    background-color: abs.$background;
     color: abs.$dark-grey;
+    font-family: abs.$font;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
