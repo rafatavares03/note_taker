@@ -9,10 +9,11 @@
 }
 
 body {
+    @include abs.flex-box;
     background-color: abs.$background;
-    color: abs.$dark-grey;
+    color: abs.$black;
     font-family: abs.$font;
+    font-size: 18px;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
 }

@@ -1,6 +1,48 @@
+@use '../abstract/variables' as var;
+
 @mixin flex-box($direction: row, $justify: center, $align: center) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+@mixin border-solid($pixels, $color) {
+    border: solid $pixels $color;
+}
+
+@mixin form-style {
+    .form {
+        @include flex-box($direction: column);
+
+        textarea {
+            @include border-solid(2px, var.$hightlight-color);
+            height: 100px;
+            width: 500px;
+            padding: 10px;
+            background-color: var.$dark-grey;
+            color: var.$light-grey;
+            font-family: var.$font;
+            font-size: 15px;
+            outline: 0;
+            resize: none;
+            overflow-y: auto;
+        }
+
+        .button {
+            @include border-solid(2px, var.$hightlight-color);
+            margin: 15px 0px;
+            padding: 10px 30px;
+            background-color: var.$dark-grey;
+            color: var.$hightlight-color;
+            border-radius: 3px;
+            font-weight: 600;
+
+            &:hover {
+                @include border-solid(2px, var.$dark-grey);
+                background-color: var.$hightlight-color;
+                color: var.$dark-grey;
+            }
+        }
+    }
 }

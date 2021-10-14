@@ -1,5 +1,17 @@
 @use '../abstract' as abs;
 
 .container {
-    @include abs.flex-box($direction: column);
+    @include abs.form-style;
+    text-align: center;
+    padding: 40px;
+    border-radius: 1px;
+
+    h1 {
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    p {
+        margin: 10px 0px 15px 0px;
+    }
 }

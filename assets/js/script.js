@@ -4,7 +4,7 @@ const modalContent = document.querySelector('#modal-content');
 
 function NoteAreaIsEmpty() {
     if (NotesArea.childNodes.length === 0) {
-        const messageText = document.createTextNode(`You haven't added a note yet!`);
+        const messageText = document.createTextNode(`Nenhuma nota foi criada ainda!`);
         const messageTag = document.createElement('p');
         messageTag.id = "emptyMessage";
         messageTag.appendChild(messageText);
@@ -19,7 +19,7 @@ NoteAreaIsEmpty();
 function createViewButton(text) {
     const button = document.createElement('input');
     button.type = "button";
-    button.value = "View Detail";
+    button.value = "Ver Detalhes";
     button.classList.add("button");
     button.onclick = () => {
         modalContent.innerHTML = text;
@@ -33,7 +33,7 @@ function createNote(note) {
     const noteTitle = document.createElement('h1');
     const noteParagraph = document.createElement('p');
     const noteText = document.createTextNode(note);
-    const titleText = document.createTextNode('Note ' + (NotesArea.childNodes.length + 1));
+    const titleText = document.createTextNode('Nota ' + (NotesArea.childNodes.length + 1));
     const viewButton = createViewButton(note);
 
 
@@ -59,7 +59,7 @@ document.querySelector('#submitNote').addEventListener('click', function submitN
         NoteAreaIsEmpty();
         createNote(note);
     } else {
-        window.alert('Write some note to submit!');
+        window.alert('Erro! Não é possível criar notas vazias.');
     }
 });
 
