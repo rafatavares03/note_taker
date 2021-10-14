@@ -6,13 +6,14 @@
 }
 
 .note {
+    @include abs.button(5px 15px, 3px 0px 0px 0px);
     width: 150px;
     height: 125px;
     padding: 3px;
     margin: 15px;
     font-size: 13px;
-    background-color: abs.$notes-background;
-    color: abs.$dark-grey;
+    background-color: #000;
+    color: abs.$white;
     box-shadow: abs.$notes-shadow;
 
     p {
@@ -23,4 +24,6 @@
         word-break: break-all;
         overflow: hidden;
     }
+
+    
 }

@@ -11,14 +11,35 @@
     border: solid $pixels $color;
 }
 
+@mixin button($padding, $margin) {
+    .button {
+        @include border-solid(2px, var.$hightlight-color);
+        margin: $margin;
+        padding: $padding;
+        background-color: var.$dark-grey;
+        color: var.$hightlight-color;
+        border-radius: 3px;
+        font-weight: 600;
+        font-family: inherit;
+        outline: 0;
+
+        &:hover {
+            @include border-solid(2px, var.$dark-grey);
+            background-color: var.$hightlight-color;
+            color: var.$dark-grey;
+        }
+    }
+}
+
 @mixin form-style {
     .form {
         @include flex-box($direction: column);
+        @include button(10px 30px, 15px 0px);
 
         textarea {
             @include border-solid(2px, var.$hightlight-color);
             height: 100px;
-            width: 500px;
+            width: 575px;
             padding: 10px;
             background-color: var.$dark-grey;
             color: var.$light-grey;
@@ -27,22 +48,6 @@
             outline: 0;
             resize: none;
             overflow-y: auto;
-        }
-
-        .button {
-            @include border-solid(2px, var.$hightlight-color);
-            margin: 15px 0px;
-            padding: 10px 30px;
-            background-color: var.$dark-grey;
-            color: var.$hightlight-color;
-            border-radius: 3px;
-            font-weight: 600;
-
-            &:hover {
-                @include border-solid(2px, var.$dark-grey);
-                background-color: var.$hightlight-color;
-                color: var.$dark-grey;
-            }
         }
     }
 }

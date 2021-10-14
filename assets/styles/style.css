@@ -29,19 +29,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container .form textarea {
-  border: solid 2px #2DD91A;
-  height: 100px;
-  width: 500px;
-  padding: 10px;
-  background-color: #222;
-  color: #ddd;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 15px;
-  outline: 0;
-  resize: none;
-  overflow-y: auto;
-}
 .container .form .button {
   border: solid 2px #2DD91A;
   margin: 15px 0px;
@@ -50,11 +37,26 @@ body {
   color: #2DD91A;
   border-radius: 3px;
   font-weight: 600;
+  font-family: inherit;
+  outline: 0;
 }
 .container .form .button:hover {
   border: solid 2px #222;
   background-color: #2DD91A;
   color: #222;
+}
+.container .form textarea {
+  border: solid 2px #2DD91A;
+  height: 100px;
+  width: 575px;
+  padding: 10px;
+  background-color: #222;
+  color: #ddd;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 15px;
+  outline: 0;
+  resize: none;
+  overflow-y: auto;
 }
 .container h1 {
   font-weight: 600;
@@ -65,11 +67,14 @@ body {
 }
 
 .notesArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border: solid 2px #2DD91A;
   height: 250px;
-  width: 500px;
+  width: 575px;
   background-color: #222;
-  display: flex;
   flex-wrap: wrap;
   color: #ddd;
   overflow-y: auto;
@@ -86,9 +91,25 @@ body {
   padding: 3px;
   margin: 15px;
   font-size: 13px;
-  background-color: #ededed;
-  color: #222;
+  background-color: #000;
+  color: #fff;
   box-shadow: 0px 0px 5px 3px #2DD91A;
+}
+.note .button {
+  border: solid 2px #2DD91A;
+  margin: 3px 0px 0px 0px;
+  padding: 5px 15px;
+  background-color: #222;
+  color: #2DD91A;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family: inherit;
+  outline: 0;
+}
+.note .button:hover {
+  border: solid 2px #222;
+  background-color: #2DD91A;
+  color: #222;
 }
 .note p {
   margin: 0;

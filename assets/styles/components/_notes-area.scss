@@ -1,11 +1,11 @@
 @use '../abstract' as abs;
 
 .notesArea {
+    @include abs.flex-box();
     @include abs.border-solid(2px, abs.$hightlight-color);
     height: 250px;
-    width: 500px;
+    width: 575px;
     background-color: abs.$dark-grey;
-    display: flex;
     flex-wrap: wrap;
     color: abs.$light-grey;
     overflow-y: auto;
