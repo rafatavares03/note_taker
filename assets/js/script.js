@@ -7,7 +7,7 @@ const modalContent = document.querySelector('#modal-content');
 
 function NoteAreaIsEmpty() {
     if (NotesArea.childNodes.length === 0) {
-        const messageText = document.createTextNode(`Nenhuma nota foi criada ainda!`);
+        const messageText = document.createTextNode(`Não há notas para serem exibidas, crie novas notas!`);
         const messageTag = document.createElement('p');
         messageTag.id = "emptyMessage";
         messageTag.appendChild(messageText);
@@ -46,8 +46,10 @@ function createViewButton() {
 
 function createRemoveButton() {
     const button = buttonBase('\u2716', "remove");
-    button.onclick = e => e.target.parentNode.remove();
-
+    button.onclick = (e) => {
+        e.target.parentNode.remove();
+        NoteAreaIsEmpty();
+    }
     return button;
 }
 
@@ -57,14 +59,14 @@ function createNote(note) {
     const noteTitle = document.createElement('h1');
     const noteParagraph = document.createElement('p');
     const noteText = document.createTextNode(note);
-    const title = document.querySelector('#noteTitle').value;
+    const title = document.querySelector('#titleNote').value;
     const titleText = document.createTextNode(title);
     const viewButton = createViewButton();
     const removeButton = createRemoveButton();
 
 
     noteArea.classList.add('note');
-    noteTitle.appendChild(title);
+    noteTitle.appendChild(titleText);
     noteParagraph.appendChild(noteText);
     noteArea.appendChild(noteTitle);
     noteArea.appendChild(noteParagraph);
@@ -73,8 +75,8 @@ function createNote(note) {
     NotesArea.appendChild(noteArea);
     
     
-    const noteInput = document.querySelector('#note');
-    noteInput.value = '';
+    document.querySelector('#note').value = '';
+    document.querySelector('#titleNote').value = '';
 }
 
 

@@ -47,7 +47,7 @@
         @include flex-box($direction: column);
         @include button(10px 30px, 15px 0px);
 
-        #noteTitle {
+        #titleNote {
             @include form-inputs;
             margin-bottom: 15px;
         }

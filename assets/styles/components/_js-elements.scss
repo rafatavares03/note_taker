@@ -15,6 +15,13 @@
     background-color: #000;
     color: abs.$white;
     box-shadow: abs.$notes-shadow;
+    position: relative;
+
+    h1 {
+        width: 75%;
+        overflow: hidden;
+        margin: auto;
+    }
 
     p {
         margin: 0;
@@ -25,5 +32,16 @@
         overflow: hidden;
     }
 
-    
+    .remove {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        height: 30px;
+        width: 30px;
+        background-color: abs.$red;
+        border: 0;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 50%;
+    }
 }
