@@ -23,7 +23,7 @@
     }
 
     .modal-header {
-        @include abs.flex-box($justify: flex-end);
+        @include abs.flex-box($justify: space-between);
         margin-bottom: 10px;
     }
 
@@ -33,6 +33,10 @@
         border: 0;
         background-color: abs.$white;
         cursor: pointer;
+    }
+
+    #modal-content {
+        white-space: pre-wrap;
     }
 }
 

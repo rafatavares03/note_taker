@@ -147,7 +147,7 @@ body {
 .modal .modal-header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -157,6 +157,9 @@ body {
   border: 0;
   background-color: #fff;
   cursor: pointer;
+}
+.modal #modal-content {
+  white-space: pre-wrap;
 }
 
 .modal.isVisible {
