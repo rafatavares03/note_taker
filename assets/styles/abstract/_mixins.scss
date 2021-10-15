@@ -24,11 +24,22 @@
         outline: 0;
 
         &:hover {
-            @include border-solid(2px, var.$dark-grey);
-            background-color: var.$hightlight-color;
-            color: var.$dark-grey;
+            @include border-solid(2px, var.$hightlight-color);
+            background-color: var.$light-grey;
+            color: var.$background;
         }
     }
+}
+
+@mixin form-inputs {
+    @include border-solid(2px, var.$hightlight-color);
+    width: 100%;
+    padding: 10px;
+    background-color: var.$dark-grey;
+    color: var.$light-grey;
+    font-family: var.$font;
+    font-size: 15px;
+    outline: 0;
 }
 
 @mixin form-style {
@@ -36,16 +47,14 @@
         @include flex-box($direction: column);
         @include button(10px 30px, 15px 0px);
 
+        #noteTitle {
+            @include form-inputs;
+            margin-bottom: 15px;
+        }
+
         textarea {
-            @include border-solid(2px, var.$hightlight-color);
+            @include form-inputs;
             height: 100px;
-            width: 575px;
-            padding: 10px;
-            background-color: var.$dark-grey;
-            color: var.$light-grey;
-            font-family: var.$font;
-            font-size: 15px;
-            outline: 0;
             resize: none;
             overflow-y: auto;
         }

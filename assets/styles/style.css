@@ -22,6 +22,7 @@ body {
   text-align: center;
   padding: 40px;
   border-radius: 1px;
+  max-width: 670px;
 }
 .container .form {
   display: flex;
@@ -41,20 +42,31 @@ body {
   outline: 0;
 }
 .container .form .button:hover {
-  border: solid 2px #222;
-  background-color: #2DD91A;
-  color: #222;
-}
-.container .form textarea {
   border: solid 2px #2DD91A;
-  height: 100px;
-  width: 575px;
+  background-color: #ddd;
+  color: #17700D;
+}
+.container .form #noteTitle {
+  border: solid 2px #2DD91A;
+  width: 100%;
   padding: 10px;
   background-color: #222;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   outline: 0;
+  margin-bottom: 15px;
+}
+.container .form textarea {
+  border: solid 2px #2DD91A;
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  color: #ddd;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 15px;
+  outline: 0;
+  height: 100px;
   resize: none;
   overflow-y: auto;
 }
@@ -107,9 +119,9 @@ body {
   outline: 0;
 }
 .note .button:hover {
-  border: solid 2px #222;
-  background-color: #2DD91A;
-  color: #222;
+  border: solid 2px #2DD91A;
+  background-color: #ddd;
+  color: #17700D;
 }
 .note p {
   margin: 0;
@@ -159,7 +171,17 @@ body {
   cursor: pointer;
 }
 .modal #modal-content {
+  height: 80%;
   white-space: pre-wrap;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+.modal .modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 35px;
 }
 
 .modal.isVisible {

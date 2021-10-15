@@ -36,7 +36,15 @@
     }
 
     #modal-content {
+        height: 80%;
         white-space: pre-wrap;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+    .modal-footer {
+        @include abs.flex-box($justify: flex-end);
+        height: 35px;
     }
 }
 

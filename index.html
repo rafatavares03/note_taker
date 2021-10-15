@@ -13,8 +13,9 @@
             <h1>Bloco de notas</h1>
             <p>Escreva algo para criar uma nova nota!</p>
             <form class="form">
-                <textarea id="note"></textarea>
-                <input type="button" id="submitNote" class="button" value="Criar">
+                <input type="text" name="title" id="noteTitle" placeholder="Título da nota"/>
+                <textarea id="note" placeholder="Texto da nota"></textarea>
+                <input type="button" id="submitNote" class="button" value="Criar"/>
             </form>
             <div class="notesArea" id="notesArea"></div>
         </section>
@@ -25,6 +26,7 @@
                     <input type="button" id="closePop-Up" value="&#10006;"/>
                 </header>
                 <p id="modal-content"></p>
+                <footer class="modal-footer"></footer>
             </div>
         </section>
     </main>
