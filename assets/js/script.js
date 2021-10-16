@@ -44,12 +44,25 @@ function createViewButton() {
     return button;
 }
 
+
+function createEditButton() {
+    const button = buttonBase("Editar", "edit");
+    button.onclick = (e) => {
+        const parent = e.target.parentNode;
+        const title = parent.firstChild.innerText;
+    }
+    button.title = 'Edit';
+    return button;
+}
+
+
 function createRemoveButton() {
     const button = buttonBase('\u2716', "remove");
     button.onclick = (e) => {
         e.target.parentNode.remove();
         NoteAreaIsEmpty();
     }
+    button.title = 'Excluir';
     return button;
 }
 
@@ -62,6 +75,7 @@ function createNote(note) {
     const title = document.querySelector('#titleNote').value;
     const titleText = document.createTextNode(title);
     const viewButton = createViewButton();
+    const editButton = createEditButton();
     const removeButton = createRemoveButton();
 
 
@@ -71,6 +85,7 @@ function createNote(note) {
     noteArea.appendChild(noteTitle);
     noteArea.appendChild(noteParagraph);
     noteArea.appendChild(viewButton);
+    noteArea.appendChild(editButton);
     noteArea.appendChild(removeButton);
     NotesArea.appendChild(noteArea);
     

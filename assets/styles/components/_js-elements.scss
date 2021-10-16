@@ -8,7 +8,7 @@
 .note {
     @include abs.button(5px 15px, 3px 0px 0px 0px);
     width: 150px;
-    height: 125px;
+    height: 140px;
     padding: 3px;
     margin: 15px;
     font-size: 13px;
@@ -21,6 +21,7 @@
         width: 75%;
         overflow: hidden;
         margin: auto;
+        margin-top: 10px;
     }
 
     p {
@@ -32,16 +33,22 @@
         overflow: hidden;
     }
 
+
     .remove {
+        @include abs.remove(abs.$red);
+        left: -10px;
+    }
+
+    .edit {
         position: absolute;
         top: -10px;
-        left: -10px;
-        height: 30px;
-        width: 30px;
-        background-color: abs.$red;
+        right: -5px;
+        padding: 2px 5px;
+        font-weight: bold;
+        background-color: abs.$dark-grey;
+        color: abs.$hightlight-color;
         border: 0;
+        border: solid 1px abs.$hightlight-color;
         cursor: pointer;
-        font-size: 15px;
-        border-radius: 50%;
     }
 }

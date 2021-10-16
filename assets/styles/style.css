@@ -40,6 +40,7 @@ body {
   font-weight: 600;
   font-family: inherit;
   outline: 0;
+  cursor: pointer;
 }
 .container .form .button:hover {
   border: solid 2px #2DD91A;
@@ -99,7 +100,7 @@ body {
 
 .note {
   width: 150px;
-  height: 125px;
+  height: 140px;
   padding: 3px;
   margin: 15px;
   font-size: 13px;
@@ -118,6 +119,7 @@ body {
   font-weight: 600;
   font-family: inherit;
   outline: 0;
+  cursor: pointer;
 }
 .note .button:hover {
   border: solid 2px #2DD91A;
@@ -128,6 +130,7 @@ body {
   width: 75%;
   overflow: hidden;
   margin: auto;
+  margin-top: 10px;
 }
 .note p {
   margin: 0;
@@ -140,14 +143,33 @@ body {
 .note .remove {
   position: absolute;
   top: -10px;
-  left: -10px;
   height: 30px;
   width: 30px;
-  background-color: #F50B00;
   border: 0;
   cursor: pointer;
   font-size: 15px;
   border-radius: 50%;
+  color: #F50B00;
+  background-color: #000;
+  border: solid 2px #F50B00;
+  left: -10px;
+}
+.note .remove:hover {
+  color: #000;
+  border: solid 3px #000;
+  background-color: #F50B00;
+}
+.note .edit {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  padding: 2px 5px;
+  font-weight: bold;
+  background-color: #222;
+  color: #2DD91A;
+  border: 0;
+  border: solid 1px #2DD91A;
+  cursor: pointer;
 }
 
 .modal {
