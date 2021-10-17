@@ -11,24 +11,47 @@
     border: solid $pixels $color;
 }
 
+@mixin button-base($padding, $hover, $hover-color) {
+    @include border-solid(2px, var.$hightlight-color);
+    padding: $padding;
+    background-color: var.$dark-grey;
+    color: var.$hightlight-color;
+    border-radius: 3px;
+    font-weight: 600;
+    font-family: inherit;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover;
+        color: $hover-color;
+    }
+}
+
 @mixin button($padding, $margin) {
     .button {
-        @include border-solid(2px, var.$hightlight-color);
+        @include button-base($padding, var.$light-grey, var.$background);
         margin: $margin;
-        padding: $padding;
-        background-color: var.$dark-grey;
-        color: var.$hightlight-color;
-        border-radius: 3px;
-        font-weight: 600;
-        font-family: inherit;
-        outline: 0;
-        cursor: pointer;
+    }
+}
 
-        &:hover {
-            @include border-solid(2px, var.$hightlight-color);
-            background-color: var.$light-grey;
-            color: var.$background;
-        }
+@mixin remove($background) {
+    position: absolute;
+    top: -10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50%;
+    color: $background;
+    background-color: var.$black;
+    border: solid 2px $background;
+
+    &:hover {
+        color: var.$black;
+        border: solid 3px var.$black;
+        background-color: $background;
     }
 }
 
@@ -59,25 +82,5 @@
             resize: none;
             overflow-y: auto;
         }
-    }
-}
-
-@mixin remove($background) {
-    position: absolute;
-    top: -10px;
-    height: 30px;
-    width: 30px;
-    border: 0;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 50%;
-    color: $background;
-    background-color: var.$black;
-    border: solid 2px $background;
-
-    &:hover {
-        color: var.$black;
-        border: solid 3px var.$black;
-        background-color: $background;
     }
 }

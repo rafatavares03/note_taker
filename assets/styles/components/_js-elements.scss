@@ -8,7 +8,7 @@
 .note {
     @include abs.button(5px 15px, 3px 0px 0px 0px);
     width: 150px;
-    height: 140px;
+    height: 150px;
     padding: 3px;
     margin: 15px;
     font-size: 13px;
@@ -40,15 +40,10 @@
     }
 
     .edit {
+        @include abs.button-base(2px 10px, abs.$black, abs.$hightlight-color);
         position: absolute;
-        top: -10px;
-        right: -5px;
-        padding: 2px 5px;
-        font-weight: bold;
-        background-color: abs.$dark-grey;
-        color: abs.$hightlight-color;
-        border: 0;
-        border: solid 1px abs.$hightlight-color;
-        cursor: pointer;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -25px;
     }
 }

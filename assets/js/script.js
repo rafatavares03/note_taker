@@ -41,17 +41,7 @@ function createViewButton() {
         modalContent.innerHTML = text;
         modal.classList.add("isVisible");
     }
-    return button;
-}
 
-
-function createEditButton() {
-    const button = buttonBase("Editar", "edit");
-    button.onclick = (e) => {
-        const parent = e.target.parentNode;
-        const title = parent.firstChild.innerText;
-    }
-    button.title = 'Edit';
     return button;
 }
 
@@ -63,6 +53,20 @@ function createRemoveButton() {
         NoteAreaIsEmpty();
     }
     button.title = 'Excluir';
+    return button;
+}
+
+
+function createEditButton() {
+    const button = buttonBase("Editar", "edit");
+    button.onclick = (e) => {
+        const parent = e.target.parentNode;
+        const title = parent.firstChild.innerText;
+        const text = parent.children[1].innerText;
+        
+        
+    }
+
     return button;
 }
 
