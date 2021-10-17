@@ -137,8 +137,11 @@ body {
   color: #17700D;
 }
 .note h1 {
+  font-size: 18px;
+  height: 18px;
   width: 75%;
   overflow: hidden;
+  text-overflow: ellipsis;
   margin: auto;
   margin-top: 10px;
 }
@@ -149,6 +152,8 @@ body {
   white-space: pre-wrap;
   word-break: break-all;
   overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ddd;
 }
 .note .remove {
   position: absolute;

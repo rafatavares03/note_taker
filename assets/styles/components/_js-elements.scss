@@ -18,8 +18,11 @@
     position: relative;
 
     h1 {
+        font-size: 18px;
+        height: 18px;
         width: 75%;
         overflow: hidden;
+        text-overflow: ellipsis;
         margin: auto;
         margin-top: 10px;
     }
@@ -31,6 +34,8 @@
         white-space: pre-wrap;
         word-break: break-all;
         overflow: hidden;
+        text-overflow: ellipsis;
+        color: abs.$light-grey;
     }
 
 
