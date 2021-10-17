@@ -3,8 +3,9 @@
 .container {
     @include abs.form-style;
     text-align: center;
-    padding: 40px;
+    padding: 10px 10px;
     border-radius: 1px;
+    width: 100vw;
     max-width: 670px;
 
     h1 {
@@ -14,5 +15,16 @@
 
     p {
         margin: 10px 0px 15px 0px;
+    }
+
+    .notesArea {
+        @include abs.flex-box();
+        @include abs.border-solid(2px, abs.$hightlight-color);
+        width: 100%;
+        height: 250px;
+        background-color: abs.$dark-grey;
+        flex-wrap: wrap;
+        color: abs.$light-grey;
+        overflow-y: auto;
     }
 }

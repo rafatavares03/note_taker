@@ -64,7 +64,11 @@ function createEditButton() {
         const title = parent.firstChild.innerText;
         const text = parent.children[1].innerText;
         
-        
+        document.querySelector('#titleNote').value = title;
+        document.querySelector('#note').value = text;
+
+        e.target.parentNode.remove();
+        NoteAreaIsEmpty();
     }
 
     return button;

@@ -84,3 +84,30 @@
         }
     }
 }
+
+@mixin scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var.$transparent-black;
+      
+    &::-webkit-scrollbar {
+       width: 6px;
+    }
+      
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+      
+    &::-webkit-scrollbar-thumb {
+        background-color: var.$transparent-black;
+        border-radius: 20px;
+        border: 0;
+    }
+}
+
+@mixin mobile-m {
+    @media screen and (max-width: 400px) {
+        .note {
+            width: 250px;
+        }
+    }
+}
