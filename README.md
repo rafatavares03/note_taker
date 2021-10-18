@@ -48,17 +48,17 @@ Funcionalidades
 Tecnologias
 -----------
 <p align="center">
-  <a href="https://html.com/" target="_blank"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
-  <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
-  <a href="https://www.javascript.com/" target="_blank"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></a>
-  <a href="https://sass-lang.com/" target="_blank"><img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/></a>
+  <a href="https://html.com/"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
+  <a href="https://www.w3.org/Style/CSS/Overview.en.html"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/></a>
+  <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></a>
+  <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/></a>
 </p>
 
 Autor
 ------
 <h3 align="center">Rafael Tavares</h3>
 <p align="center">
- <a href="https://www.facebook.com/rafael.tavares.39904/" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></img></a>
- <a href="https://www.instagram.com/rafatavares03/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a>
- <a hrf="https://github.com/rafatavares03" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white/></a>
+ <a href="https://www.facebook.com/rafael.tavares.39904/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></img></a>
+ <a href="https://www.instagram.com/rafatavares03/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></img></a>
+ <a hrf="https://github.com/rafatavares03"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white/></a>
 </p>
