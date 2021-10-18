@@ -49,6 +49,7 @@ body {
   background-color: #222;
   color: #2DD91A;
   border-radius: 3px;
+  font-size: 13px;
   font-weight: 600;
   font-family: inherit;
   outline: 0;
@@ -114,7 +115,6 @@ body {
   height: 150px;
   padding: 3px;
   margin: 15px;
-  font-size: 13px;
   background-color: #000;
   color: #fff;
   box-shadow: 0px 0px 5px 3px #2DD91A;
@@ -122,10 +122,11 @@ body {
 }
 .note .button {
   border: solid 2px #2DD91A;
-  padding: 5px 15px;
+  padding: 3px 10px;
   background-color: #222;
   color: #2DD91A;
   border-radius: 3px;
+  font-size: 13px;
   font-weight: 600;
   font-family: inherit;
   outline: 0;
@@ -146,14 +147,15 @@ body {
   margin-top: 10px;
 }
 .note p {
-  margin: 0;
-  width: 100%;
+  font-size: 13px;
+  margin: 5px auto;
+  width: 95%;
   height: 60px;
   white-space: pre-wrap;
   word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #ddd;
+  color: #aaa;
 }
 .note .remove {
   position: absolute;
@@ -180,6 +182,7 @@ body {
   background-color: #222;
   color: #2DD91A;
   border-radius: 3px;
+  font-size: 13px;
   font-weight: 600;
   font-family: inherit;
   outline: 0;
