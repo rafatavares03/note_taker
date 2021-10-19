@@ -7,35 +7,35 @@
 
 .note {
     @include abs.button(3px 10px, 3px 0px 0px 0px);
-    width: 150px;
+    background-color: #000;
+    box-shadow: abs.$notes-box-shadow;
+    color: abs.$white;
+    margin: 15px;
     height: 150px;
     padding: 3px;
-    margin: 15px;
-    background-color: #000;
-    color: abs.$white;
-    box-shadow: abs.$notes-shadow;
     position: relative;
+    width: 150px;
 
     h1 {
         font-size: 18px;
         height: 18px;
-        width: 75%;
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin: auto;
         margin-top: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 75%;
     }
 
     p {
+        color: abs.$grey;
         font-size: 13px;
-        margin: 5px auto;
-        width: 95%;
         height: 60px;
-        white-space: pre-wrap;
-        word-break: break-all;
+        margin: 5px auto;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: abs.$grey;
+        width: 95%;
+        white-space: pre-wrap;
+        word-break: break-all;
     }
 
 
@@ -45,11 +45,11 @@
     }
 
     .edit {
-        @include abs.button-base(2px 10px, abs.$black, abs.$hightlight-color);
-        position: absolute;
+        @include abs.button-base(2px 10px, abs.$black, abs.$color-button);
         bottom: -10px;
         left: 50%;
         margin-left: -30px;
-        min-width: 60px;
+        position: absolute;
+        width: 60px;
     }
 }

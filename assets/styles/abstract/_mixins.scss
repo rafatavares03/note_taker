@@ -1,27 +1,23 @@
 @use '../abstract/variables' as var;
 
 @mixin flex-box($direction: row, $justify: center, $align: center) {
+    align-items: $align;
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
-    align-items: $align;
 }
 
-@mixin border-solid($pixels, $color) {
-    border: solid $pixels $color;
-}
-
-@mixin button-base($padding, $hover, $hover-color) {
-    @include border-solid(2px, var.$hightlight-color);
-    padding: $padding;
+@mixin button-base($padding, $hover, $hover-color) { 
     background-color: var.$dark-grey;
-    color: var.$hightlight-color;
+    border: var.$border-button;
     border-radius: 3px;
+    color: var.$color-button;
+    cursor: var.$cursor-button;
+    font-family: inherit;
     font-size: 13px;
     font-weight: 600;
-    font-family: inherit;
     outline: 0;
-    cursor: pointer;
+    padding: $padding;
 
     &:hover {
         background-color: $hover;
@@ -31,40 +27,40 @@
 
 @mixin button($padding, $margin) {
     .button {
-        @include button-base($padding, var.$light-grey, var.$background);
+        @include button-base($padding, var.$light-grey, var.$color-button-hover);
         margin: $margin;
     }
 }
 
 @mixin remove($background) {
-    position: absolute;
-    top: -10px;
-    height: 30px;
-    width: 30px;
-    border: 0;
-    cursor: pointer;
-    font-size: 15px;
+    background-color: var.$black;
+    /*border: 0;*/
+    border: solid 2px $background;
     border-radius: 50%;
     color: $background;
-    background-color: var.$black;
-    border: solid 2px $background;
+    cursor: var.$cursor-button;
+    font-size: 15px;
+    height: 30px;
+    position: absolute;
+    top: -10px;
+    width: 30px;
 
     &:hover {
-        color: var.$black;
-        border: solid 3px var.$black;
         background-color: $background;
+        border: solid 3px var.$black;
+        color: var.$black;
     }
 }
 
 @mixin form-inputs {
-    @include border-solid(2px, var.$hightlight-color);
-    width: 100%;
-    padding: 10px;
     background-color: var.$dark-grey;
+    border: var.$border-input;
     color: var.$light-grey;
-    font-family: var.$font;
+    font-family: var.$font-family-inputs;
     font-size: 15px;
     outline: 0;
+    padding: 10px;
+    width: 100%;
 }
 
 @mixin form-style {
@@ -87,21 +83,21 @@
 }
 
 @mixin scrollbar {
+    scrollbar-color: var.$color-scrollbar;
     scrollbar-width: thin;
-    scrollbar-color: var.$transparent-black;
       
     &::-webkit-scrollbar {
        width: 6px;
     }
       
     &::-webkit-scrollbar-track {
-        background: transparent;
+        background: var.$color-scrollbar-background;
     }
       
     &::-webkit-scrollbar-thumb {
-        background-color: var.$transparent-black;
-        border-radius: 20px;
-        border: 0;
+        background-color: var.$color-scrollbar;
+        border: var.$no-border;
+        border-radius: var.$border-radius-scrollbar;
     }
 }
 

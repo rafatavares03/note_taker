@@ -4,16 +4,15 @@
 
 * {
     @include abs.scrollbar;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     @include abs.flex-box;
-    min-height: 100vh;
-    background-color: abs.$background;
-    color: abs.$black;
-    font-family: abs.$font;
+    background-color: abs.$color-body-background;
+    font-family: abs.$font-family-body;
     font-size: 18px;
+    min-height: 100vh;
 }

@@ -1,13 +1,79 @@
-$white: #fff;
-$light-grey: #ddd;
-$grey: #aaa;
-$dark-grey: #222;
 $black: #000;
-$transparent-black: #0008;
-$background: #17700D;
-$hightlight-color: #2DD91A;
+$dark-green: #17700D;
+$dark-grey: #222;
+$green: #2DD91A;
+$grey: #aaa;
 $light-blue: #00D4E0;
+$light-grey: #ddd;
 $red: #F50B00;
-$notes-shadow: 0px 0px 5px 3px $hightlight-color;
+$transparent: transparent;
+$transparent-black: #0008;
+$white: #fff;
 
-$font: 'Roboto', Arial, sans-serif;
+
+
+
+
+$px0: 0px;
+$px1: 1px;
+$px2: 2px;
+$px3: 3px;
+$px5: 5px;
+$px10: 10px;
+$px13: 13px;
+$px15: 15px;
+$px18: 18px;
+$px20: 20px;
+$px25: 25px;
+$px30: 30px;
+$px35: 35px;
+
+
+
+
+
+$font-family: 'Roboto', Arial, sans-serif;
+$font-family-body: $font-family;
+$font-family-inputs: $font-family;
+
+
+
+
+$auto: auto;
+$pointer: pointer;
+
+
+
+
+
+$color-body-background: $dark-green;
+$color-button: $green;
+$color-button-border: $green;
+$color-button-hover: $dark-green;
+$color-input-border: $green;
+$color-scrollbar: $transparent-black;
+$color-scrollbar-background: $transparent;
+$color-shadow: $green;
+$cursor-button: $pointer;
+$cursor-normal: $auto;
+
+
+
+
+
+$border-button: solid $px2 $color-button-border;
+$border-input: solid $px2 $color-input-border;
+$border-radius-scrollbar: $px20;
+
+
+
+
+
+$no-border: $px0;
+$notes-box-shadow: $px0 $px0 $px5 $px3 $color-shadow;
+
+
+
+
+
+$width-border: $px2;

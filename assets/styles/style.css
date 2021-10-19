@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
 * {
-  scrollbar-width: thin;
   scrollbar-color: #0008;
+  scrollbar-width: thin;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 *::-webkit-scrollbar {
   width: 6px;
@@ -14,46 +14,45 @@
 }
 *::-webkit-scrollbar-thumb {
   background-color: #0008;
+  border: 0px;
   border-radius: 20px;
-  border: 0;
 }
 
 body {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background-color: #17700D;
-  color: #000;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
+  min-height: 100vh;
 }
 
 .container {
-  text-align: center;
-  padding: 10px 10px;
   border-radius: 1px;
-  width: 100vw;
   max-width: 670px;
+  padding: 10px 10px;
+  text-align: center;
+  width: 100vw;
 }
 .container .form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .container .form .button {
-  border: solid 2px #2DD91A;
-  padding: 10px 30px;
   background-color: #222;
-  color: #2DD91A;
+  border: solid 2px #2DD91A;
   border-radius: 3px;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  font-family: inherit;
   outline: 0;
-  cursor: pointer;
+  padding: 10px 30px;
   margin: 15px 0px;
 }
 .container .form .button:hover {
@@ -61,48 +60,48 @@ body {
   color: #17700D;
 }
 .container .form #titleNote {
-  border: solid 2px #2DD91A;
-  width: 100%;
-  padding: 10px;
   background-color: #222;
+  border: solid 2px #2DD91A;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   outline: 0;
+  padding: 10px;
+  width: 100%;
   margin-bottom: 15px;
 }
 .container .form textarea {
-  border: solid 2px #2DD91A;
-  width: 100%;
-  padding: 10px;
   background-color: #222;
+  border: solid 2px #2DD91A;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   outline: 0;
+  padding: 10px;
+  width: 100%;
   height: 100px;
   resize: none;
   overflow-y: auto;
 }
 .container h1 {
-  font-weight: 600;
   font-style: italic;
+  font-weight: 600;
 }
 .container p {
   margin: 10px 0px 15px 0px;
 }
 .container .notesArea {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  border: solid 2px #2DD91A;
-  width: 100%;
-  height: 250px;
   background-color: #222;
-  flex-wrap: wrap;
+  border: solid 2px #2DD91A;
   color: #ddd;
+  flex-wrap: wrap;
+  height: 250px;
   overflow-y: auto;
+  width: 100%;
 }
 
 #emptyMessage {
@@ -111,26 +110,26 @@ body {
 }
 
 .note {
-  width: 150px;
+  background-color: #000;
+  box-shadow: 0px 0px 5px 3px #2DD91A;
+  color: #fff;
+  margin: 15px;
   height: 150px;
   padding: 3px;
-  margin: 15px;
-  background-color: #000;
-  color: #fff;
-  box-shadow: 0px 0px 5px 3px #2DD91A;
   position: relative;
+  width: 150px;
 }
 .note .button {
-  border: solid 2px #2DD91A;
-  padding: 3px 10px;
   background-color: #222;
-  color: #2DD91A;
+  border: solid 2px #2DD91A;
   border-radius: 3px;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  font-family: inherit;
   outline: 0;
-  cursor: pointer;
+  padding: 3px 10px;
   margin: 3px 0px 0px 0px;
 }
 .note .button:hover {
@@ -140,58 +139,58 @@ body {
 .note h1 {
   font-size: 18px;
   height: 18px;
-  width: 75%;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin: auto;
   margin-top: 10px;
-}
-.note p {
-  font-size: 13px;
-  margin: 5px auto;
-  width: 95%;
-  height: 60px;
-  white-space: pre-wrap;
-  word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 75%;
+}
+.note p {
   color: #aaa;
+  font-size: 13px;
+  height: 60px;
+  margin: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 .note .remove {
-  position: absolute;
-  top: -10px;
-  height: 30px;
-  width: 30px;
-  border: 0;
-  cursor: pointer;
-  font-size: 15px;
+  background-color: #000;
+  /*border: 0;*/
+  border: solid 2px #F50B00;
   border-radius: 50%;
   color: #F50B00;
-  background-color: #000;
-  border: solid 2px #F50B00;
+  cursor: pointer;
+  font-size: 15px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  width: 30px;
   left: -10px;
 }
 .note .remove:hover {
-  color: #000;
-  border: solid 3px #000;
   background-color: #F50B00;
+  border: solid 3px #000;
+  color: #000;
 }
 .note .edit {
-  border: solid 2px #2DD91A;
-  padding: 2px 10px;
   background-color: #222;
-  color: #2DD91A;
+  border: solid 2px #2DD91A;
   border-radius: 3px;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  font-family: inherit;
   outline: 0;
-  cursor: pointer;
-  position: absolute;
+  padding: 2px 10px;
   bottom: -10px;
   left: 50%;
   margin-left: -30px;
-  min-width: 60px;
+  position: absolute;
+  width: 60px;
 }
 .note .edit:hover {
   background-color: #000;
@@ -199,58 +198,51 @@ body {
 }
 
 .modal {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   background-color: #0008;
+  bottom: 0;
   cursor: pointer;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   visibility: hidden;
+  z-index: 10;
 }
 .modal .modal-container {
-  height: 85%;
-  width: 85%;
   background-color: #fff;
-  padding: 20px;
+  cursor: auto;
+  height: 85%;
   overflow-y: auto;
   overflow-wrap: break-word;
-  cursor: auto;
+  padding: 20px;
+  width: 85%;
 }
 .modal .modal-header {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 .modal h1 {
   max-width: 70%;
 }
 .modal #closePop-Up {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
   font-size: 18px;
   padding: 0px 10px;
-  border: 0;
-  background-color: #fff;
-  cursor: pointer;
 }
 .modal #modal-content {
-  max-height: 85%;
-  white-space: pre-wrap;
-  overflow-y: auto;
   margin-bottom: 20px;
-}
-.modal .modal-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  height: 35px;
+  max-height: 85%;
+  overflow-y: auto;
+  white-space: pre-wrap;
 }
 
 .modal.isVisible {
