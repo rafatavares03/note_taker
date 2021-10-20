@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <title>Bloco de Notas</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Bloco de Notas</title>
 </head>
+
 <body>
-    <main>
-        <section class="container">
-            <h1>Bloco de notas</h1>
-            <p>Escreva algo para criar uma nova nota!</p>
-            <form class="form">
-                <input type="text" name="title" id="titleNote" placeholder="Título da nota"/>
-                <textarea id="note" placeholder="Texto da nota"></textarea>
-                <input type="button" id="submitNote" class="button" value="Criar"/>
-            </form>
-            <div class="notesArea" id="notesArea"></div>
-        </section>
-        <section class="modal" id="modal-popup">
-            <div class="modal-container">
-                <header class="modal-header">
-                    <h1 id="noteTitle"></h1>
-                    <input type="button" id="closePop-Up" value="&#10006;"/>
-                </header>
-                <p id="modal-content"></p>
-            </div>
-        </section>
-    </main>
-    <script src="assets/js/script.js"></script>
+  <main>
+    <section class="container">
+      <h1>Bloco de notas</h1>
+      <p>Escreva algo para criar uma nova nota!</p>
+      <form class="form">
+        <input type="text" name="title" id="titleNote" placeholder="Título da nota" />
+        <textarea id="note" placeholder="Texto da nota"></textarea>
+        <input type="button" id="submitNote" class="button" value="Criar" />
+      </form>
+      <div class="notesArea" id="notesArea"></div>
+    </section>
+    <section class="modal" id="modal-popup">
+      <div class="modal-container">
+        <header class="modal-header">
+          <h1 id="noteTitle"></h1>
+          <input type="button" id="closePop-Up" value="&#10006;" />
+        </header>
+        <p id="modal-content"></p>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -3,8 +3,8 @@
   scrollbar-color: #0008;
   scrollbar-width: thin;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 *::-webkit-scrollbar {
   width: 6px;
@@ -48,10 +48,10 @@ body {
   border-radius: 3px;
   color: #2DD91A;
   cursor: pointer;
-  font-family: inherit;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  outline: 0;
+  outline: 0px;
   padding: 10px 30px;
   margin: 15px 0px;
 }
@@ -65,7 +65,7 @@ body {
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
-  outline: 0;
+  outline: 0px;
   padding: 10px;
   width: 100%;
   margin-bottom: 15px;
@@ -76,7 +76,7 @@ body {
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
-  outline: 0;
+  outline: 0px;
   padding: 10px;
   width: 100%;
   height: 100px;
@@ -125,16 +125,34 @@ body {
   border-radius: 3px;
   color: #2DD91A;
   cursor: pointer;
-  font-family: inherit;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  outline: 0;
+  outline: 0px;
   padding: 3px 10px;
   margin: 3px 0px 0px 0px;
 }
 .note .button:hover {
   background-color: #ddd;
   color: #17700D;
+}
+.note .remove {
+  background-color: #000;
+  border: solid 2px #F50B00;
+  border-radius: 50%;
+  color: #F50B00;
+  cursor: pointer;
+  font-size: 15px;
+  height: 30px;
+  left: -10px;
+  position: absolute;
+  top: -10px;
+  width: 30px;
+}
+.note .remove:hover {
+  background-color: #F50B00;
+  border: solid 2px #000;
+  color: #000;
 }
 .note h1 {
   font-size: 18px;
@@ -156,35 +174,16 @@ body {
   white-space: pre-wrap;
   word-break: break-all;
 }
-.note .remove {
-  background-color: #000;
-  /*border: 0;*/
-  border: solid 2px #F50B00;
-  border-radius: 50%;
-  color: #F50B00;
-  cursor: pointer;
-  font-size: 15px;
-  height: 30px;
-  position: absolute;
-  top: -10px;
-  width: 30px;
-  left: -10px;
-}
-.note .remove:hover {
-  background-color: #F50B00;
-  border: solid 3px #000;
-  color: #000;
-}
 .note .edit {
   background-color: #222;
   border: solid 2px #2DD91A;
   border-radius: 3px;
   color: #2DD91A;
   cursor: pointer;
-  font-family: inherit;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  outline: 0;
+  outline: 0px;
   padding: 2px 10px;
   bottom: -10px;
   left: 50%;
