@@ -1,0 +1,31 @@
+@use "../abstract" as abs;
+
+.container {
+  @include abs.flex-box($direction: column);
+  @include abs.form-style;
+  border-radius: 1px;
+  padding: 10px 10px;
+  margin: auto;
+  min-height: 100vh;
+  text-align: center;
+
+  h1 {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 10px 0px 15px 0px;
+  }
+
+  .notesArea {
+    @include abs.flex-box();
+    background-color: abs.$dark-grey;
+    border: abs.$border-input;
+    color: abs.$light-grey;
+    flex-wrap: wrap;
+    height: 250px;
+    overflow-y: auto;
+    width: 100%;
+  }
+}
