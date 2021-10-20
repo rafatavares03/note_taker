@@ -2,24 +2,24 @@
 
 .modal {
     @include abs.flex-box();
-    background-color: abs.$transparent-black;
-    bottom: 0;
-    cursor: abs.$cursor-button;
-    left: 0;
     position: fixed;
-    right: 0;
     top: 0;
-    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
+    background-color: abs.$transparent-black;
+    cursor: pointer;
+    visibility: hidden;
 
     .modal-container {
-        background-color: abs.$white;
-        cursor: abs.$cursor-normal;
         height: 85%;
+        width: 85%;
+        background-color: abs.$white;
+        padding: 20px;
         overflow-y: auto;
         overflow-wrap: break-word;
-        padding: 20px;
-        width: 85%;
+        cursor: auto;
     }
 
     .modal-header {
@@ -32,18 +32,23 @@
     }
 
     #closePop-Up {
-        background-color: abs.$white;
-        border: 0;
-        cursor: abs.$cursor-button;
         font-size: 18px;
         padding: 0px 10px;
+        border: 0;
+        background-color: abs.$white;
+        cursor: pointer;
     }
 
     #modal-content {
-        margin-bottom: 20px;
         max-height: 85%;
-        overflow-y: auto;
         white-space: pre-wrap;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+    .modal-footer {
+        @include abs.flex-box($justify: flex-end);
+        height: 35px;
     }
 }
 

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
 * {
-  scrollbar-color: #0008;
   scrollbar-width: thin;
+  scrollbar-color: #0008;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
 }
 *::-webkit-scrollbar {
   width: 6px;
@@ -14,45 +14,46 @@
 }
 *::-webkit-scrollbar-thumb {
   background-color: #0008;
-  border: 0px;
   border-radius: 20px;
+  border: 0;
 }
 
 body {
-  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: #17700D;
+  color: #000;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
-  min-height: 100vh;
 }
 
 .container {
-  border-radius: 1px;
-  max-width: 670px;
-  padding: 10px 10px;
   text-align: center;
+  padding: 10px 10px;
+  border-radius: 1px;
   width: 100vw;
+  max-width: 670px;
 }
 .container .form {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .container .form .button {
-  background-color: #222;
   border: solid 2px #2DD91A;
-  border-radius: 3px;
+  padding: 10px 30px;
+  background-color: #222;
   color: #2DD91A;
-  cursor: pointer;
-  font-family: "Roboto", Arial, sans-serif;
+  border-radius: 3px;
   font-size: 13px;
   font-weight: 600;
-  outline: 0px;
-  padding: 10px 30px;
+  font-family: inherit;
+  outline: 0;
+  cursor: pointer;
   margin: 15px 0px;
 }
 .container .form .button:hover {
@@ -60,48 +61,48 @@ body {
   color: #17700D;
 }
 .container .form #titleNote {
-  background-color: #222;
   border: solid 2px #2DD91A;
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
-  outline: 0px;
-  padding: 10px;
-  width: 100%;
+  outline: 0;
   margin-bottom: 15px;
 }
 .container .form textarea {
-  background-color: #222;
   border: solid 2px #2DD91A;
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
-  outline: 0px;
-  padding: 10px;
-  width: 100%;
+  outline: 0;
   height: 100px;
   resize: none;
   overflow-y: auto;
 }
 .container h1 {
-  font-style: italic;
   font-weight: 600;
+  font-style: italic;
 }
 .container p {
   margin: 10px 0px 15px 0px;
 }
 .container .notesArea {
-  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #222;
+  align-items: center;
   border: solid 2px #2DD91A;
-  color: #ddd;
-  flex-wrap: wrap;
-  height: 250px;
-  overflow-y: auto;
   width: 100%;
+  height: 250px;
+  background-color: #222;
+  flex-wrap: wrap;
+  color: #ddd;
+  overflow-y: auto;
 }
 
 #emptyMessage {
@@ -110,26 +111,26 @@ body {
 }
 
 .note {
-  background-color: #000;
-  box-shadow: 0px 0px 5px 3px #2DD91A;
-  color: #fff;
-  margin: 15px;
+  width: 150px;
   height: 150px;
   padding: 3px;
+  margin: 15px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0px 0px 5px 3px #2DD91A;
   position: relative;
-  width: 150px;
 }
 .note .button {
-  background-color: #222;
   border: solid 2px #2DD91A;
-  border-radius: 3px;
+  padding: 3px 10px;
+  background-color: #222;
   color: #2DD91A;
-  cursor: pointer;
-  font-family: "Roboto", Arial, sans-serif;
+  border-radius: 3px;
   font-size: 13px;
   font-weight: 600;
-  outline: 0px;
-  padding: 3px 10px;
+  font-family: inherit;
+  outline: 0;
+  cursor: pointer;
   margin: 3px 0px 0px 0px;
 }
 .note .button:hover {
@@ -157,39 +158,58 @@ body {
 .note h1 {
   font-size: 18px;
   height: 18px;
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: auto;
   margin-top: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 75%;
 }
 .note p {
-  color: #aaa;
   font-size: 13px;
-  height: 60px;
   margin: 5px auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 95%;
+  height: 60px;
   white-space: pre-wrap;
   word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #aaa;
+}
+.note .remove {
+  position: absolute;
+  top: -10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 50%;
+  color: #F50B00;
+  background-color: #000;
+  border: solid 2px #F50B00;
+  left: -10px;
+}
+.note .remove:hover {
+  color: #000;
+  border: solid 3px #000;
+  background-color: #F50B00;
 }
 .note .edit {
-  background-color: #222;
   border: solid 2px #2DD91A;
-  border-radius: 3px;
+  padding: 2px 10px;
+  background-color: #222;
   color: #2DD91A;
-  cursor: pointer;
-  font-family: "Roboto", Arial, sans-serif;
+  border-radius: 3px;
   font-size: 13px;
   font-weight: 600;
-  outline: 0px;
-  padding: 2px 10px;
+  font-family: inherit;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
   bottom: -10px;
   left: 50%;
   margin-left: -30px;
-  position: absolute;
-  width: 60px;
+  min-width: 60px;
 }
 .note .edit:hover {
   background-color: #000;
@@ -197,51 +217,58 @@ body {
 }
 
 .modal {
-  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #0008;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
+  align-items: center;
   position: fixed;
-  right: 0;
   top: 0;
-  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
+  background-color: #0008;
+  cursor: pointer;
+  visibility: hidden;
 }
 .modal .modal-container {
-  background-color: #fff;
-  cursor: auto;
   height: 85%;
+  width: 85%;
+  background-color: #fff;
+  padding: 20px;
   overflow-y: auto;
   overflow-wrap: break-word;
-  padding: 20px;
-  width: 85%;
+  cursor: auto;
 }
 .modal .modal-header {
-  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 .modal h1 {
   max-width: 70%;
 }
 .modal #closePop-Up {
-  background-color: #fff;
-  border: 0;
-  cursor: pointer;
   font-size: 18px;
   padding: 0px 10px;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
 }
 .modal #modal-content {
-  margin-bottom: 20px;
   max-height: 85%;
-  overflow-y: auto;
   white-space: pre-wrap;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+.modal .modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 35px;
 }
 
 .modal.isVisible {

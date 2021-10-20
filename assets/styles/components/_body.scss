@@ -3,16 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
 
 * {
-  @include abs.scrollbar;
-  box-sizing: border-box;
-  margin: abs.$no-margin;
-  padding: abs.$no-padding;
+    @include abs.scrollbar;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     @include abs.flex-box;
-    background-color: abs.$color-body-background;
-    font-family: abs.$font-family-body;
-    font-size: 18px;
     min-height: 100vh;
+    background-color: abs.$background;
+    color: abs.$black;
+    font-family: abs.$font;
+    font-size: 18px;
 }

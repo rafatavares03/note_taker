@@ -1,23 +1,27 @@
 @use '../abstract/variables' as var;
 
 @mixin flex-box($direction: row, $justify: center, $align: center) {
-    align-items: $align;
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
+    align-items: $align;
 }
 
-@mixin button-base($padding, $hover-bg, $hover-color) { 
-    background-color: var.$dark-grey;
-    border: var.$border-button;
-    border-radius: var.$border-radius-button;
-    color: var.$color-button;
-    cursor: var.$cursor-button;
-    font-family: var.$font-family-button;
-    font-size: var.$font-size-button;
-    font-weight: var.$font-semi-bold;
-    outline: var.$no-outline;
+@mixin border-solid($pixels, $color) {
+    border: solid $pixels $color;
+}
+
+@mixin button-base($padding, $hover, $hover-color) {
+    @include border-solid(2px, var.$hightlight-color);
     padding: $padding;
+    background-color: var.$dark-grey;
+    color: var.$hightlight-color;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    outline: 0;
+    cursor: pointer;
 
     &:hover {
         background-color: $hover-bg;
@@ -27,42 +31,41 @@
 
 @mixin button($padding, $margin) {
     .button {
-        @include button-base($padding, var.$color-bg-button-hover, var.$color-button-hover);
+        @include button-base($padding, var.$light-grey, var.$background);
         margin: $margin;
     }
 }
 
-@mixin remove() {
-  .remove {
-    background-color: var.$color-bg-remove;
-    border: var.$border-button-remove;
-    border-radius: var.$border-radius-remove;
-    color: var.$color-button-remove;
-    cursor: var.$cursor-button;
-    font-size: var.$font-size-remove;
-    height: var.$height-remove;
-    left: var.$remove-left;
-    position: var.$remove-position;
-    top: var.$remove-top;
-    width: var.$width-remove;
+@mixin remove($background) {
+    position: absolute;
+    top: -10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50%;
+    color: $background;
+    background-color: var.$black;
+    border: solid 2px $background;
 
     &:hover {
-        background-color: var.$color-bg-remove-hover;
-        border: var.$border-button-remove-hover;
-        color: var.$color-button-remove-hover;
+        color: var.$black;
+        border: solid 3px var.$black;
+        background-color: $background;
     }
   }
 }
 
 @mixin form-inputs {
-    background-color: var.$color-bg-input;
-    border: var.$border-input;
-    color: var.$color-input;
-    font-family: var.$font-family-input;
-    font-size: var.$font-size-input;
-    outline: var.$no-outline;
-    padding: var.$padding-input;
-    width: var.$width-input;
+    @include border-solid(2px, var.$hightlight-color);
+    width: 100%;
+    padding: 10px;
+    background-color: var.$dark-grey;
+    color: var.$light-grey;
+    font-family: var.$font;
+    font-size: 15px;
+    outline: 0;
 }
 
 @mixin form-style {
@@ -85,21 +88,21 @@
 }
 
 @mixin scrollbar {
-    scrollbar-color: var.$color-scrollbar;
     scrollbar-width: thin;
+    scrollbar-color: var.$transparent-black;
       
     &::-webkit-scrollbar {
        width: var.$width-scrollbar;
     }
       
     &::-webkit-scrollbar-track {
-        background: var.$color-scrollbar-background;
+        background: transparent;
     }
       
     &::-webkit-scrollbar-thumb {
-        background-color: var.$color-scrollbar;
-        border: var.$no-border;
-        border-radius: var.$border-radius-scrollbar;
+        background-color: var.$transparent-black;
+        border-radius: 20px;
+        border: 0;
     }
 }
 
