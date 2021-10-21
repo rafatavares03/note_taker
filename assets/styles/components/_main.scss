@@ -20,8 +20,8 @@
 
   .notesArea {
     @include abs.flex-box();
+    @include abs.border-solid;
     background-color: abs.$dark-grey;
-    border: abs.$border-input;
     color: abs.$light-grey;
     flex-wrap: wrap;
     height: 250px;

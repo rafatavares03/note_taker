@@ -1,19 +1,16 @@
-@use '../abstract' as abs;
+@use "../abstract" as abs;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
 
 * {
-    @include abs.scrollbar;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  @include abs.scrollbar;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    @include abs.flex-box;
-    min-height: 100vh;
-    background-color: abs.$background;
-    color: abs.$black;
-    font-family: abs.$font;
-    font-size: 18px;
+  @include abs.flex-box;
+  background-color: abs.$body-bg-color;
+  font-family: abs.$body-font;
 }

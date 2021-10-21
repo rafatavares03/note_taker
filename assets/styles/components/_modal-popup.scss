@@ -1,57 +1,57 @@
-@use '../abstract' as abs;
+@use "../abstract" as abs;
 
 .modal {
-    @include abs.flex-box();
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: abs.$transparent-black;
+  @include abs.flex-box();
+  background-color: abs.$transparent-black;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 10;
+
+  .modal-container {
+    background-color: abs.$white;
+    cursor: auto;
+    height: 85%;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    width: 85%;
+  }
+
+  .modal-header {
+    @include abs.flex-box($justify: space-between);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    max-width: 70%;
+  }
+
+  #closePop-Up {
+    background-color: abs.$white;
+    border: 0;
     cursor: pointer;
-    visibility: hidden;
+    font-size: 18px;
+    padding: 0px 10px;
+  }
 
-    .modal-container {
-        height: 85%;
-        width: 85%;
-        background-color: abs.$white;
-        padding: 20px;
-        overflow-y: auto;
-        overflow-wrap: break-word;
-        cursor: auto;
-    }
+  #modal-content {
+    margin-bottom: 20px;
+    max-height: 85%;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
 
-    .modal-header {
-        @include abs.flex-box($justify: space-between);
-        margin-bottom: 10px;
-    }
-
-    h1 {
-        max-width: 70%;
-    }
-
-    #closePop-Up {
-        font-size: 18px;
-        padding: 0px 10px;
-        border: 0;
-        background-color: abs.$white;
-        cursor: pointer;
-    }
-
-    #modal-content {
-        max-height: 85%;
-        white-space: pre-wrap;
-        overflow-y: auto;
-        margin-bottom: 20px;
-    }
-
-    .modal-footer {
-        @include abs.flex-box($justify: flex-end);
-        height: 35px;
-    }
+  .modal-footer {
+    @include abs.flex-box($justify: flex-end);
+    height: 35px;
+  }
 }
 
 .modal.isVisible {
-    visibility: visible;
+  visibility: visible;
 }

@@ -1,60 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
 * {
-  scrollbar-width: thin;
   scrollbar-color: #0008;
+  scrollbar-width: thin;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 *::-webkit-scrollbar {
-  width: 6px;
+  width: 0.5rem;
 }
 *::-webkit-scrollbar-track {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #0008;
-  border-radius: 20px;
+  background-color: transparent;
   border: 0;
+  border-radius: 0.5rem;
 }
 
 body {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background-color: #17700D;
-  color: #000;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 18px;
 }
 
 .container {
-  text-align: center;
-  padding: 10px 10px;
-  border-radius: 1px;
-  width: 100vw;
-  max-width: 670px;
-}
-.container .form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 1px;
+  padding: 10px 10px;
+  margin: auto;
+  min-height: 100vh;
+  text-align: center;
+}
+.container .form {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container .form .button {
   border: solid 2px #2DD91A;
-  padding: 10px 30px;
   background-color: #222;
-  color: #2DD91A;
   border-radius: 3px;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: inherit;
-  outline: 0;
+  color: #2DD91A;
   cursor: pointer;
-  margin: 15px 0px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  outline: 0;
+  margin: 1rem;
 }
 .container .form .button:hover {
   background-color: #ddd;
@@ -62,47 +63,47 @@ body {
 }
 .container .form #titleNote {
   border: solid 2px #2DD91A;
-  width: 100%;
-  padding: 10px;
   background-color: #222;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   outline: 0;
-  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 .container .form textarea {
   border: solid 2px #2DD91A;
-  width: 100%;
-  padding: 10px;
   background-color: #222;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   outline: 0;
-  height: 100px;
-  resize: none;
+  padding: 10px;
+  width: 100%;
+  max-height: 250px;
   overflow-y: auto;
+  resize: 0;
 }
 .container h1 {
-  font-weight: 600;
   font-style: italic;
+  font-weight: 600;
 }
 .container p {
   margin: 10px 0px 15px 0px;
 }
 .container .notesArea {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   border: solid 2px #2DD91A;
-  width: 100%;
-  height: 250px;
   background-color: #222;
-  flex-wrap: wrap;
   color: #ddd;
+  flex-wrap: wrap;
+  height: 250px;
   overflow-y: auto;
+  width: 100%;
 }
 
 #emptyMessage {
@@ -111,105 +112,68 @@ body {
 }
 
 .note {
-  width: 150px;
-  height: 150px;
-  padding: 3px;
-  margin: 15px;
   background-color: #000;
-  color: #fff;
   box-shadow: 0px 0px 5px 3px #2DD91A;
+  color: #fff;
+  height: 150px;
+  margin: 15px;
+  padding: 3px;
   position: relative;
+  width: 150px;
 }
 .note .button {
   border: solid 2px #2DD91A;
-  padding: 3px 10px;
   background-color: #222;
-  color: #2DD91A;
   border-radius: 3px;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: inherit;
-  outline: 0;
+  color: #2DD91A;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  outline: 0;
   margin: 3px 0px 0px 0px;
 }
 .note .button:hover {
   background-color: #ddd;
   color: #17700D;
 }
-.note .remove {
-  background-color: #000;
-  border: solid 2px #F50B00;
-  border-radius: 50%;
-  color: #F50B00;
-  cursor: pointer;
-  font-size: 15px;
-  height: 30px;
-  left: -10px;
-  position: absolute;
-  top: -10px;
-  width: 30px;
-}
-.note .remove:hover {
-  background-color: #F50B00;
-  border: solid 2px #000;
-  color: #000;
-}
 .note h1 {
   font-size: 18px;
-  height: 18px;
-  width: 75%;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin: auto;
   margin-top: 10px;
-}
-.note p {
-  font-size: 13px;
-  margin: 5px auto;
-  width: 95%;
-  height: 60px;
-  white-space: pre-wrap;
-  word-break: break-all;
+  height: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 75%;
+}
+.note p {
   color: #aaa;
-}
-.note .remove {
-  position: absolute;
-  top: -10px;
-  height: 30px;
-  width: 30px;
-  border: 0;
-  cursor: pointer;
-  font-size: 15px;
-  border-radius: 50%;
-  color: #F50B00;
-  background-color: #000;
-  border: solid 2px #F50B00;
-  left: -10px;
-}
-.note .remove:hover {
-  color: #000;
-  border: solid 3px #000;
-  background-color: #F50B00;
+  font-size: 13px;
+  height: 60px;
+  margin: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 .note .edit {
   border: solid 2px #2DD91A;
-  padding: 2px 10px;
   background-color: #222;
-  color: #2DD91A;
   border-radius: 3px;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: inherit;
-  outline: 0;
+  color: #2DD91A;
   cursor: pointer;
-  position: absolute;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  outline: 0;
   bottom: -10px;
   left: 50%;
   margin-left: -30px;
   min-width: 60px;
+  position: absolute;
 }
 .note .edit:hover {
   background-color: #000;
@@ -217,57 +181,57 @@ body {
 }
 
 .modal {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   background-color: #0008;
   cursor: pointer;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   visibility: hidden;
+  z-index: 10;
 }
 .modal .modal-container {
-  height: 85%;
-  width: 85%;
   background-color: #fff;
+  cursor: auto;
+  height: 85%;
   padding: 20px;
   overflow-y: auto;
   overflow-wrap: break-word;
-  cursor: auto;
+  width: 85%;
 }
 .modal .modal-header {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 .modal h1 {
   max-width: 70%;
 }
 .modal #closePop-Up {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
   font-size: 18px;
   padding: 0px 10px;
-  border: 0;
-  background-color: #fff;
-  cursor: pointer;
 }
 .modal #modal-content {
-  max-height: 85%;
-  white-space: pre-wrap;
-  overflow-y: auto;
   margin-bottom: 20px;
+  max-height: 85%;
+  overflow-y: auto;
+  white-space: pre-wrap;
 }
 .modal .modal-footer {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
   height: 35px;
 }
 
@@ -275,7 +239,7 @@ body {
   visibility: visible;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 40rem) {
   .note {
     width: 250px;
   }

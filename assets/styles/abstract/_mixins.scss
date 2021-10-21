@@ -1,115 +1,113 @@
-@use '../abstract/variables' as var;
+@use "../abstract/variables" as var;
 
 @mixin flex-box($direction: row, $justify: center, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
 }
 
-@mixin border-solid($pixels, $color) {
-    border: solid $pixels $color;
+@mixin border-solid() {
+  border: solid 2px var.$border-color;
 }
 
-@mixin button-base($padding, $hover, $hover-color) {
-    @include border-solid(2px, var.$hightlight-color);
-    padding: $padding;
-    background-color: var.$dark-grey;
-    color: var.$hightlight-color;
-    border-radius: 3px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: inherit;
-    outline: 0;
-    cursor: pointer;
+@mixin button-base($hover-bg, $hover-color) {
+  @include border-solid();
+  background-color: var.$button-bg-color;
+  border-radius: 3px;
+  color: var.$button-color;
+  cursor: var.$button-cursor;
+  font-family: inherit;
+  font-size: var.$button-font-size;
+  font-weight: var.$button-font-weight;
+  padding: var.$button-padding;
+  outline: 0;
 
-    &:hover {
-        background-color: $hover-bg;
-        color: $hover-color;
-    }
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+  }
 }
 
-@mixin button($padding, $margin) {
-    .button {
-        @include button-base($padding, var.$light-grey, var.$background);
-        margin: $margin;
-    }
+@mixin button($margin) {
+  .button {
+    @include button-base(var.$button-bg-color-hover, var.$button-color-hover);
+    margin: $margin;
+  }
 }
 
 @mixin remove($background) {
-    position: absolute;
-    top: -10px;
-    height: 30px;
-    width: 30px;
-    border: 0;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 50%;
-    color: $background;
-    background-color: var.$black;
-    border: solid 2px $background;
+  background-color: var.$black;
+  border: solid 2px $background;
+  border-radius: 50%;
+  color: $background;
+  cursor: pointer;
+  font-size: 15px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  width: 30px;
 
-    &:hover {
-        color: var.$black;
-        border: solid 3px var.$black;
-        background-color: $background;
-    }
+  &:hover {
+    background-color: $background;
+    border: solid 3px var.$black;
+    color: var.$black;
   }
 }
 
 @mixin form-inputs {
-    @include border-solid(2px, var.$hightlight-color);
-    width: 100%;
-    padding: 10px;
-    background-color: var.$dark-grey;
-    color: var.$light-grey;
-    font-family: var.$font;
-    font-size: 15px;
-    outline: 0;
+  @include border-solid();
+  background-color: var.$dark-grey;
+  color: var.$light-grey;
+  font-family: var.$font;
+  font-size: 15px;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
 }
 
 @mixin form-style {
-    .form {
-        @include flex-box($direction: column);
-        @include button(var.$padding-form-button, var.$margin-form-button);
+  .form {
+    @include flex-box($direction: column);
+    @include button(var.$form-button-margin);
 
-        #titleNote {
-            @include form-inputs;
-            margin-bottom: var.$margin-title-note;
-        }
-
-        textarea {
-            @include form-inputs;
-            height: var.$height-textarea;
-            resize: var.$no-resize;
-            overflow-y: var.$overflow-textarea;
-        }
+    #titleNote {
+      @include form-inputs;
+      margin-bottom: 1rem;
     }
+
+    textarea {
+      @include form-inputs;
+      max-height: 250px;
+      overflow-y: auto;
+      resize: var.$no-resize;
+    }
+  }
 }
 
 @mixin scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: var.$transparent-black;
-      
-    &::-webkit-scrollbar {
-       width: var.$width-scrollbar;
-    }
-      
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-      
-    &::-webkit-scrollbar-thumb {
-        background-color: var.$transparent-black;
-        border-radius: 20px;
-        border: 0;
-    }
+  scrollbar-color: var.$scrollbar-color;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: var.$scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var.$scrollbar-bg-color;
+    border: var.$no-border;
+    border-radius: var.$scrollbar-border-radius;;
+  }
 }
 
 @mixin mobile-m {
-    @media screen and (max-width: var.$width-mobile-m) {
-        .note {
-            width: var.$width-note-mobile;
-        }
+  @media screen and (max-width: 40rem) {
+    .note {
+      width: 250px;
     }
+  }
 }
