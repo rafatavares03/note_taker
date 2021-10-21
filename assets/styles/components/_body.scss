@@ -10,7 +10,6 @@
 }
 
 body {
-  @include abs.flex-box;
   background-color: abs.$body-bg-color;
   font-family: abs.$body-font;
 }

@@ -2,10 +2,12 @@ $white: #fff;
 $light-grey: #ddd;
 $grey: #aaa;
 $red: #F50B00;
-$dark-green: #17700D;
+$light-green: #6BDF5E;
 $green: #2DD91A;
+$dark-green: #17700D;
 $dark-grey: #222;
-$transparent-black: #0008;
+$very-transparent-black: #0008;
+$little-transparent-black: #000e;
 $black: #000;
 
 
@@ -33,7 +35,7 @@ $body-font: $font;
 
 
 $button-bg-color: $dark-grey;
-$button-bg-color-hover: $light-grey;
+$button-bg-color-hover: $light-green;
 $button-border-radius: 0.3rem;
 $button-color: $green;
 $button-color-hover: $dark-green;
@@ -48,6 +50,8 @@ $default-border: solid 2px $green;
 
 
 $form-button-margin: 1rem;
+$form-max-width: 100ch;
+$form-width: 100%;
 
 
 $edit-button-bg-color-hover: $black;
@@ -59,6 +63,7 @@ $input-color: $light-grey;
 $input-font: $font;
 $input-font-size: 1.1rem;
 $input-padding: 0.6rem;
+$input-width: 100%;
 
 
 $notes-area-border: solid 2px $green;
@@ -74,13 +79,12 @@ $remove-button-border-radius: 50%;
 $remove-button-color: $red;
 $remove-button-color-hover: $black;
 $remove-button-font-size: 0.9rem;
-$remove-button-height-width: 1.8rem;
 $remove-button-left: -0.7rem;
+$remove-button-padding: 0.1rem 0.4rem;
 $remove-button-position: absolute;
 $remove-button-top: -0.7rem;
 
 
-$scrollbar-bg-color: transparent;
-$scrollbar-border-radius: 0.5rem;
-$scrollbar-color: $transparent-black;
-$scrollbar-width: 0.5rem;
+$scrollbar-bg-color: $very-transparent-black;
+$scrollbar-color: $light-green;
+$scrollbar-width: 0.4rem;

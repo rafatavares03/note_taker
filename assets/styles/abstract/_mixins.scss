@@ -34,11 +34,10 @@
     color: var.$remove-button-color;
     cursor: var.$button-cursor;
     font-size: var.$remove-button-font-size;
-    height: var.$remove-button-height-width;
     left: var.$remove-button-left;
+    padding: var.$remove-button-padding;
     position: var.$remove-button-position;
     top: var.$remove-button-top;
-    width: var.$remove-button-height-width;
 
     &:hover {
       background-color: var.$remove-button-bg-color-hover;
@@ -56,26 +55,26 @@
   font-size: var.$input-font-size;
   outline: var.$no-outline;
   padding: var.$input-padding;
-  width: 100%;
+  width: var.$input-width;
 }
 
 @mixin form-style {
   .form {
     @include flex-box($direction: column);
-    width: 100%;
-    
+    width: var.$form-width;
+
     #titleNote {
       @include inputs;
       margin-bottom: 1rem;
     }
-    
+
     textarea {
       @include inputs;
       height: 6rem;
       overflow-y: auto;
       resize: var.$no-resize;
     }
-    
+
     .button {
       @include button-style(var.$button-bg-color-hover, var.$button-color-hover, var.$form-button-margin);
     }
@@ -91,22 +90,27 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background: var.$scrollbar-bg-color;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var.$scrollbar-bg-color;
+    background-color: var.$scrollbar-color;
     border: var.$no-border;
-    border-radius: var.$scrollbar-border-radius;
   }
 }
 
 @mixin not-mobile {
-  @media screen and (min-width: 35rem) {
-    
+  @media screen and (min-width: 40rem) {
+    .form {
+      max-width: var.$form-max-width;
+    }
 
-    .note {
-      max-width: 30%;
+    .notesArea {
+      max-width: var.$form-max-width;
+
+      .note {
+        max-width: 30%;
+      }
     }
   }
 }

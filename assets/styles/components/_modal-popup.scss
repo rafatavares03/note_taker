@@ -2,7 +2,7 @@
 
 .modal {
   @include abs.flex-box();
-  background-color: abs.$transparent-black;
+  background-color: abs.$very-transparent-black;
   cursor: pointer;
   bottom: 0;
   left: 0;

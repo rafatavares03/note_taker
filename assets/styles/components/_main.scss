@@ -4,9 +4,9 @@
   @include abs.flex-box($direction: column);
   @include abs.form-style;
   padding: 10px 10px;
-  margin: auto;
   min-height: 100vh;
   text-align: center;
+  width: 100%;
 
   h1 {
     font-style: italic;
@@ -25,6 +25,7 @@
     flex-wrap: wrap;
     height: 250px;
     overflow-y: auto;
+    padding: 0.3rem 0 0.5rem 0;
     width: 100%;
   }
 }
