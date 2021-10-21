@@ -16,7 +16,7 @@ $no-border: 0;
 $no-margin: 0;
 $no-outline: 0;
 $no-padding: 0;
-$no-resize: 0;
+$no-resize: none;
 
 
 
@@ -31,24 +31,53 @@ $font-semi-bold: 600;
 $body-bg-color: $dark-green;
 $body-font: $font;
 
-$border-color: $green;
-
 
 $button-bg-color: $dark-grey;
 $button-bg-color-hover: $light-grey;
+$button-border-radius: 0.3rem;
 $button-color: $green;
 $button-color-hover: $dark-green;
 $button-cursor: pointer;
+$button-font-family: $font;
 $button-font-size: 0.8rem;
 $button-font-weight: $font-semi-bold;
-$button-padding: 0.5rem 0.9rem;
+$button-padding: 0.3rem 0.9rem;
+
+
+$default-border: solid 2px $green;
 
 
 $form-button-margin: 1rem;
 
 
+$edit-button-bg-color-hover: $black;
+$edit-button-color-hover: $green;
+
+
+$input-bg-color: $dark-grey;
+$input-color: $light-grey;
+$input-font: $font;
+$input-font-size: 1.1rem;
+$input-padding: 0.6rem;
+
+
 $notes-area-border: solid 2px $green;
+$notes-button-margin: 0.2rem 0rem 0.3rem 0rem;
 $notes-shadow: 0px 0px 5px 3px $green;
+
+
+$remove-button-bg-color: $black;
+$remove-button-bg-color-hover: $red;
+$remove-button-border: solid 2px $red;
+$remove-button-border-hover: solid 2px $black;
+$remove-button-border-radius: 50%;
+$remove-button-color: $red;
+$remove-button-color-hover: $black;
+$remove-button-font-size: 0.9rem;
+$remove-button-height-width: 1.8rem;
+$remove-button-left: -0.7rem;
+$remove-button-position: absolute;
+$remove-button-top: -0.7rem;
 
 
 $scrollbar-bg-color: transparent;

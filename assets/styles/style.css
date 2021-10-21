@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 1px;
   padding: 10px 10px;
   margin: auto;
   min-height: 100vh;
@@ -43,47 +42,48 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.container .form .button {
-  border: solid 2px #2DD91A;
-  background-color: #222;
-  border-radius: 3px;
-  color: #2DD91A;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.5rem 0.9rem;
-  outline: 0;
-  margin: 1rem;
-}
-.container .form .button:hover {
-  background-color: #ddd;
-  color: #17700D;
+  width: 100%;
 }
 .container .form #titleNote {
-  border: solid 2px #2DD91A;
   background-color: #222;
+  border: solid 2px #2DD91A;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 1.1rem;
   outline: 0;
-  padding: 10px;
+  padding: 0.6rem;
   width: 100%;
   margin-bottom: 1rem;
 }
 .container .form textarea {
-  border: solid 2px #2DD91A;
   background-color: #222;
+  border: solid 2px #2DD91A;
   color: #ddd;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 1.1rem;
   outline: 0;
-  padding: 10px;
+  padding: 0.6rem;
   width: 100%;
-  max-height: 250px;
+  height: 6rem;
   overflow-y: auto;
-  resize: 0;
+  resize: none;
+}
+.container .form .button {
+  background-color: #222;
+  border: solid 2px #2DD91A;
+  border-radius: 0.3rem;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem;
+  padding: 0.3rem 0.9rem;
+  outline: 0;
+}
+.container .form .button:hover {
+  background-color: #ddd;
+  color: #17700D;
 }
 .container h1 {
   font-style: italic;
@@ -97,8 +97,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: solid 2px #2DD91A;
   background-color: #222;
+  border: solid 2px #2DD91A;
   color: #ddd;
   flex-wrap: wrap;
   height: 250px;
@@ -115,42 +115,41 @@ body {
   background-color: #000;
   box-shadow: 0px 0px 5px 3px #2DD91A;
   color: #fff;
-  height: 150px;
   margin: 15px;
-  padding: 3px;
+  padding: 1rem 0.3rem;
   position: relative;
-  width: 150px;
+  width: 85%;
 }
-.note .button {
-  border: solid 2px #2DD91A;
-  background-color: #222;
-  border-radius: 3px;
-  color: #2DD91A;
+.note .remove {
+  background-color: #000;
+  border: solid 2px #F50B00;
+  border-radius: 50%;
+  color: #F50B00;
   cursor: pointer;
-  font-family: inherit;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.5rem 0.9rem;
-  outline: 0;
-  margin: 3px 0px 0px 0px;
+  font-size: 0.9rem;
+  height: 1.8rem;
+  left: -0.7rem;
+  position: absolute;
+  top: -0.7rem;
+  width: 1.8rem;
 }
-.note .button:hover {
-  background-color: #ddd;
-  color: #17700D;
+.note .remove:hover {
+  background-color: #F50B00;
+  border: solid 2px #000;
+  color: #F50B00;
 }
 .note h1 {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin: auto;
-  margin-top: 10px;
-  height: 18px;
+  max-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 75%;
+  width: 90%;
 }
 .note p {
   color: #aaa;
-  font-size: 13px;
-  height: 60px;
+  font-size: 0.8rem;
+  height: 4.9rem;
   margin: 5px auto;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -158,21 +157,38 @@ body {
   white-space: pre-wrap;
   word-break: break-all;
 }
-.note .edit {
-  border: solid 2px #2DD91A;
+.note .button {
   background-color: #222;
-  border-radius: 3px;
+  border: solid 2px #2DD91A;
+  border-radius: 0.3rem;
   color: #2DD91A;
   cursor: pointer;
-  font-family: inherit;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.5rem 0.9rem;
+  margin: 0.2rem 0rem 0.3rem 0rem;
+  padding: 0.3rem 0.9rem;
   outline: 0;
-  bottom: -10px;
+}
+.note .button:hover {
+  background-color: #ddd;
+  color: #17700D;
+}
+.note .edit {
+  background-color: #222;
+  border: solid 2px #2DD91A;
+  border-radius: 0.3rem;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.3rem 0.9rem;
+  outline: 0;
+  bottom: -0.9rem;
   left: 50%;
-  margin-left: -30px;
-  min-width: 60px;
+  margin-left: -2rem;
   position: absolute;
 }
 .note .edit:hover {
@@ -239,9 +255,9 @@ body {
   visibility: visible;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (min-width: 35rem) {
   .note {
-    width: 250px;
+    max-width: 30%;
   }
 }
 

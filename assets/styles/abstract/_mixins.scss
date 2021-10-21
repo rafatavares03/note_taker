@@ -7,21 +7,18 @@
   justify-content: $justify;
 }
 
-@mixin border-solid() {
-  border: solid 2px var.$border-color;
-}
-
-@mixin button-base($hover-bg, $hover-color) {
-  @include border-solid();
+@mixin button-style($hover-bg, $hover-color, $margin) {
   background-color: var.$button-bg-color;
-  border-radius: 3px;
+  border: var.$default-border;
+  border-radius: var.$button-border-radius;
   color: var.$button-color;
   cursor: var.$button-cursor;
-  font-family: inherit;
+  font-family: var.$button-font-family;
   font-size: var.$button-font-size;
   font-weight: var.$button-font-weight;
+  margin: $margin;
   padding: var.$button-padding;
-  outline: 0;
+  outline: var.$no-outline;
 
   &:hover {
     background-color: $hover-bg;
@@ -29,58 +26,58 @@
   }
 }
 
-@mixin button($margin) {
-  .button {
-    @include button-base(var.$button-bg-color-hover, var.$button-color-hover);
-    margin: $margin;
+@mixin remove-button() {
+  .remove {
+    background-color: var.$remove-button-bg-color;
+    border: var.$remove-button-border;
+    border-radius: var.$remove-button-border-radius;
+    color: var.$remove-button-color;
+    cursor: var.$button-cursor;
+    font-size: var.$remove-button-font-size;
+    height: var.$remove-button-height-width;
+    left: var.$remove-button-left;
+    position: var.$remove-button-position;
+    top: var.$remove-button-top;
+    width: var.$remove-button-height-width;
+
+    &:hover {
+      background-color: var.$remove-button-bg-color-hover;
+      border: var.$remove-button-border-hover;
+      color: var.$remove-button-bg-color-hover;
+    }
   }
 }
 
-@mixin remove($background) {
-  background-color: var.$black;
-  border: solid 2px $background;
-  border-radius: 50%;
-  color: $background;
-  cursor: pointer;
-  font-size: 15px;
-  height: 30px;
-  position: absolute;
-  top: -10px;
-  width: 30px;
-
-  &:hover {
-    background-color: $background;
-    border: solid 3px var.$black;
-    color: var.$black;
-  }
-}
-
-@mixin form-inputs {
-  @include border-solid();
-  background-color: var.$dark-grey;
-  color: var.$light-grey;
-  font-family: var.$font;
-  font-size: 15px;
-  outline: 0;
-  padding: 10px;
+@mixin inputs {
+  background-color: var.$input-bg-color;
+  border: var.$default-border;
+  color: var.$input-color;
+  font-family: var.$input-font;
+  font-size: var.$input-font-size;
+  outline: var.$no-outline;
+  padding: var.$input-padding;
   width: 100%;
 }
 
 @mixin form-style {
   .form {
     @include flex-box($direction: column);
-    @include button(var.$form-button-margin);
-
+    width: 100%;
+    
     #titleNote {
-      @include form-inputs;
+      @include inputs;
       margin-bottom: 1rem;
     }
-
+    
     textarea {
-      @include form-inputs;
-      max-height: 250px;
+      @include inputs;
+      height: 6rem;
       overflow-y: auto;
       resize: var.$no-resize;
+    }
+    
+    .button {
+      @include button-style(var.$button-bg-color-hover, var.$button-color-hover, var.$form-button-margin);
     }
   }
 }
@@ -100,14 +97,16 @@
   &::-webkit-scrollbar-thumb {
     background-color: var.$scrollbar-bg-color;
     border: var.$no-border;
-    border-radius: var.$scrollbar-border-radius;;
+    border-radius: var.$scrollbar-border-radius;
   }
 }
 
-@mixin mobile-m {
-  @media screen and (max-width: 40rem) {
+@mixin not-mobile {
+  @media screen and (min-width: 35rem) {
+    
+
     .note {
-      width: 250px;
+      max-width: 30%;
     }
   }
 }

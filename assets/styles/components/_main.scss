@@ -3,7 +3,6 @@
 .container {
   @include abs.flex-box($direction: column);
   @include abs.form-style;
-  border-radius: 1px;
   padding: 10px 10px;
   margin: auto;
   min-height: 100vh;
@@ -20,8 +19,8 @@
 
   .notesArea {
     @include abs.flex-box();
-    @include abs.border-solid;
     background-color: abs.$dark-grey;
+    border: abs.$default-border;
     color: abs.$light-grey;
     flex-wrap: wrap;
     height: 250px;
