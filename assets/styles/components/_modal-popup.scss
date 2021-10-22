@@ -2,56 +2,52 @@
 
 .modal {
   @include abs.flex-box();
-  background-color: abs.$very-transparent-black;
-  cursor: pointer;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-  z-index: 10;
+  background-color: abs.$modal-bg-color;
+  bottom: abs.$modal-bottom;
+  cursor: abs.$button-cursor;
+  visibility: abs.$modal-visibility;
+  left: abs.$modal-left;
+  position: abs.$modal-position;
+  right: abs.$modal-right;
+  top: abs.$modal-top;
+  z-index: abs.$modal-z-index;
 
   .modal-container {
-    background-color: abs.$white;
-    cursor: auto;
-    height: 85%;
-    padding: 20px;
-    overflow-y: auto;
-    overflow-wrap: break-word;
-    width: 85%;
+    background-color: abs.$modal-container-bg-color;
+    cursor: abs.$modal-container-cursor;
+    height: abs.$modal-container-height;
+    padding: abs.$modal-container-padding;
+    overflow-y: abs.$modal-container-overflow;
+    width: abs.$modal-container-width;
   }
 
   .modal-header {
-    @include abs.flex-box($justify: space-between);
-    margin-bottom: 10px;
+    @include abs.flex-box($justify: space-between, $align: flex-start);
+    margin-bottom: 0.8rem;
   }
 
   h1 {
-    max-width: 70%;
+    font-size: abs.$modal-h1-font-size;
+    max-width: abs.$modal-h1-max-width;
+    word-break: abs.$modal-h1-word-break;
   }
 
   #closePop-Up {
-    background-color: abs.$white;
-    border: 0;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 0px 10px;
+    background-color: abs.$modal-close-bg-color;
+    border: abs.$no-border;
+    cursor: abs.$button-cursor;
+    font-size: abs.$modal-close-font-size;
+    padding: abs.$modal-close-padding;
   }
 
   #modal-content {
-    margin-bottom: 20px;
-    max-height: 85%;
-    overflow-y: auto;
-    white-space: pre-wrap;
-  }
-
-  .modal-footer {
-    @include abs.flex-box($justify: flex-end);
-    height: 35px;
+    max-height: abs.$modal-content-max-height;
+    overflow-y: abs.$modal-content-overflow;
+    white-space: abs.$modal-content-white-space;
+    word-break: abs.$modal-content-word-break;
   }
 }
 
 .modal.isVisible {
-  visibility: visible;
+  visibility: abs.$modal-visible;
 }

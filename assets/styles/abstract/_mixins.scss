@@ -42,7 +42,7 @@
     &:hover {
       background-color: var.$remove-button-bg-color-hover;
       border: var.$remove-button-border-hover;
-      color: var.$remove-button-bg-color-hover;
+      color: var.$remove-button-color-hover;
     }
   }
 }
@@ -110,7 +110,7 @@
 }
 
 @mixin not-mobile {
-  @media screen and (min-width: 40rem) {
+  @media screen and (min-width: 35rem) {
     .form {
       max-width: var.$form-max-width;
     }
@@ -121,6 +121,79 @@
       .note {
         max-width: var.$note-max-width;
       }
+    }
+  }
+}
+
+@mixin devices-4K {
+  @media screen and (min-width: 2000px) {
+    .container {
+      .form {
+        max-width: 120ch;
+
+        #titleNote,
+        textarea {
+          font-size: 2.5rem;
+        }
+
+        textarea {
+          height: 13rem;
+        }
+
+        .button {
+          font-size: 2rem;
+        }
+      }
+
+      .notesArea {
+        max-width: 120ch;
+        height: calc(20rem + 10vh);
+      }
+    }
+  }
+
+  .note {
+    padding: 1rem 0.3rem 2.5rem 0.3rem;
+
+
+    .remove {
+      font-size: 1.5rem;
+      left: -1.5rem;
+      padding: 0.5rem 1rem;
+      top: -1.2rem;
+    }
+
+    .button {
+      font-size: 1.5rem;
+    }
+
+    .edit {
+      font-size: 1.5rem;
+      margin-left: -3rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      max-height: 2.3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      height: 7rem;
+    }
+  }
+
+  .modal {
+    h1 {
+      font-size: 3rem;
+    }
+
+    #closePop-Up {
+      font-size: 2.5rem;
+    }
+
+    #modal-content {
+      font-size: 2.2rem;
     }
   }
 }

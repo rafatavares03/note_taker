@@ -1,8 +1,9 @@
 @use "../abstract" as abs;
 
 #emptyMessage {
-  text-align: center;
-  width: 100%;
+  color: abs.$empty-message-color;
+  text-align: abs.$empty-message-text-align;
+  width: abs.$empty-message-width;
 }
 
 .note {
@@ -23,7 +24,7 @@
     max-height: abs.$note-h1-max-height;
     overflow: abs.$note-h1-overflow;
     text-overflow: abs.$note-h1-text-overflow;
-    width: abs.$note-h1-overflow;
+    width: abs.$note-h1-width;
   }
 
   p {

@@ -104,6 +104,7 @@ body {
 }
 
 #emptyMessage {
+  color: #ddd;
   text-align: center;
   width: 100%;
 }
@@ -131,8 +132,8 @@ body {
 }
 .note .remove:hover {
   background-color: #F50B00;
-  border: solid 2px #000;
-  color: #F50B00;
+  border: solid 3px #000;
+  color: #000;
 }
 .note .edit {
   background-color: #222;
@@ -162,7 +163,7 @@ body {
   max-height: 1.2rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: hidden;
+  width: 90%;
 }
 .note p {
   color: #aaa;
@@ -173,7 +174,7 @@ body {
   text-overflow: ellipsis;
   width: 95%;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: break-word;
 }
 .note .button {
   background-color: #222;
@@ -199,60 +200,54 @@ body {
   flex-direction: row;
   justify-content: center;
   background-color: #0008;
-  cursor: pointer;
   bottom: 0;
+  cursor: pointer;
+  visibility: hidden;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  visibility: hidden;
   z-index: 10;
 }
 .modal .modal-container {
   background-color: #fff;
   cursor: auto;
   height: 85%;
-  padding: 20px;
+  padding: 1.1rem;
   overflow-y: auto;
-  overflow-wrap: break-word;
   width: 85%;
 }
 .modal .modal-header {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
 }
 .modal h1 {
-  max-width: 70%;
+  font-size: 1.8rem;
+  max-width: 90%;
+  word-break: break-word;
 }
 .modal #closePop-Up {
-  background-color: #fff;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
-  font-size: 18px;
-  padding: 0px 10px;
+  font-size: 1.2rem;
+  padding: 0rem 0.6rem;
 }
 .modal #modal-content {
-  margin-bottom: 20px;
   max-height: 85%;
   overflow-y: auto;
   white-space: pre-wrap;
-}
-.modal .modal-footer {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  height: 35px;
+  word-break: break-word;
 }
 
 .modal.isVisible {
   visibility: visible;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 35rem) {
   .form {
     max-width: 100ch;
   }
@@ -263,6 +258,59 @@ body {
   .notesArea .note {
     max-width: 30%;
   }
+}
+@media screen and (min-width: 2000px) {
+  .container .form {
+    max-width: 120ch;
+  }
+  .container .form #titleNote,
+.container .form textarea {
+    font-size: 2.5rem;
+  }
+  .container .form textarea {
+    height: 13rem;
+  }
+  .container .form .button {
+    font-size: 2rem;
+  }
+  .container .notesArea {
+    max-width: 120ch;
+    height: calc(20rem + 10vh);
+  }
+}
+.note {
+  padding: 1rem 0.3rem 2.5rem 0.3rem;
+}
+.note .remove {
+  font-size: 1.5rem;
+  left: -1.5rem;
+  padding: 0.5rem 1rem;
+  top: -1.2rem;
+}
+.note .button {
+  font-size: 1.5rem;
+}
+.note .edit {
+  font-size: 1.5rem;
+  margin-left: -3rem;
+}
+.note h1 {
+  font-size: 2.3rem;
+  max-height: 2.3rem;
+}
+.note p {
+  font-size: 1.5rem;
+  height: 7rem;
+}
+
+.modal h1 {
+  font-size: 3rem;
+}
+.modal #closePop-Up {
+  font-size: 2.5rem;
+}
+.modal #modal-content {
+  font-size: 2.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

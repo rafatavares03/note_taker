@@ -73,6 +73,10 @@ $edit-button-left: 50%;
 $edit-button-margin-left: -2rem;
 $edit-button-position: absolute;
 
+$empty-message-color: $light-grey;
+$empty-message-text-align: center;
+$empty-message-width: 100%;
+
 
 $form-button-margin: 1rem;
 $form-max-width: 100ch;
@@ -85,6 +89,41 @@ $input-font: $font;
 $input-font-size: 1.1rem;
 $input-padding: 0.6rem;
 $input-width: 100%;
+
+
+$modal-bg-color: $very-transparent-black;
+$modal-bottom: 0;
+$modal-left: 0;
+$modal-position: fixed;
+$modal-right: 0;
+$modal-top: 0;
+$modal-visible: visible;
+$modal-visibility: hidden;
+$modal-z-index: 10;
+
+
+$modal-container-bg-color: $white;
+$modal-container-cursor: auto;
+$modal-container-height: 85%;
+$modal-container-padding: 1.1rem;
+$modal-container-overflow: auto;
+$modal-container-width: 85%;
+
+
+$modal-h1-font-size: 1.8rem;
+$modal-h1-max-width: 90%;
+$modal-h1-word-break: break-word;
+
+
+$modal-close-bg-color: transparent;
+$modal-close-font-size: 1.2rem;
+$modal-close-padding: 0rem 0.6rem;
+
+
+$modal-content-max-height: 85%;
+$modal-content-overflow: auto;
+$modal-content-white-space: pre-wrap;
+$modal-content-word-break: break-word;
 
 
 $note-button-margin: 0.2rem 0rem 0.3rem 0rem;
@@ -113,7 +152,7 @@ $note-p-overflow: hidden;
 $note-p-text-overflow: ellipsis;
 $note-p-width: 95%;
 $note-p-white-space: pre-wrap;
-$note-p-word-break: break-all;
+$note-p-word-break: break-word;
 
 
 $notes-area-bg-color: $dark-grey;
@@ -127,7 +166,7 @@ $notes-area-width: 100%;
 $remove-button-bg-color: $black;
 $remove-button-bg-color-hover: $red;
 $remove-button-border: solid 2px $red;
-$remove-button-border-hover: solid 2px $black;
+$remove-button-border-hover: solid 3px $black;
 $remove-button-border-radius: 50%;
 $remove-button-color: $red;
 $remove-button-color-hover: $black;

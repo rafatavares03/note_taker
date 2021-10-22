@@ -1,3 +1,4 @@
 @use '../abstract' as *;
 
 @include not-mobile;
+@include devices-4K;
