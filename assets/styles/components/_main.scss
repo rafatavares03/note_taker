@@ -3,29 +3,30 @@
 .container {
   @include abs.flex-box($direction: column);
   @include abs.form-style;
-  padding: 10px 10px;
-  min-height: 100vh;
-  text-align: center;
-  width: 100%;
+  min-height: abs.$container-min-height;
+  padding: abs.$container-padding;
+  text-align: abs.$container-text-align;
+  width: abs.$container-width;
 
   h1 {
-    font-style: italic;
-    font-weight: 600;
+    font-size: abs.$container-h1-font-size;
+    font-style: abs.$container-h1-font-style;
+    font-weight: abs.$container-h1-font-weight;
   }
 
   p {
-    margin: 10px 0px 15px 0px;
+    font-size: abs.$container-p-font-size;
+    margin: abs.$container-p-margin;
   }
 
   .notesArea {
     @include abs.flex-box();
-    background-color: abs.$dark-grey;
+    background-color: abs.$notes-area-bg-color;
     border: abs.$default-border;
-    color: abs.$light-grey;
-    flex-wrap: wrap;
-    height: 250px;
-    overflow-y: auto;
-    padding: 0.3rem 0 0.5rem 0;
-    width: 100%;
+    flex-wrap: abs.$notes-area-flex-wrap;
+    height: abs.$notes-area-height;
+    overflow-y: abs.$notes-area-overflow;
+    padding: abs.$notes-area-padding;
+    width: abs.$notes-area-width;
   }
 }

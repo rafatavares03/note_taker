@@ -27,8 +27,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 10px;
   min-height: 100vh;
+  padding: 0.5rem;
   text-align: center;
   width: 100%;
 }
@@ -81,11 +81,13 @@ body {
   color: #17700D;
 }
 .container h1 {
+  font-size: calc(2rem + 2vw);
   font-style: italic;
   font-weight: 600;
 }
 .container p {
-  margin: 10px 0px 15px 0px;
+  font-size: calc(1.1rem + 0.5vw);
+  margin: 0.5rem 0rem 0.9rem 0rem;
 }
 .container .notesArea {
   align-items: center;
@@ -94,11 +96,10 @@ body {
   justify-content: center;
   background-color: #222;
   border: solid 2px #2DD91A;
-  color: #ddd;
   flex-wrap: wrap;
   height: 250px;
   overflow-y: auto;
-  padding: 0.3rem 0 0.5rem 0;
+  padding: 0.3rem 0rem 0.5rem 0rem;
   width: 100%;
 }
 
@@ -133,19 +134,41 @@ body {
   border: solid 2px #000;
   color: #F50B00;
 }
+.note .edit {
+  background-color: #222;
+  border: solid 2px #2DD91A;
+  border-radius: 0.3rem;
+  color: #2DD91A;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.3rem 0.9rem;
+  outline: 0;
+  bottom: -0.9rem;
+  left: 50%;
+  margin-left: -2rem;
+  position: absolute;
+}
+.note .edit:hover {
+  background-color: #000;
+  color: #2DD91A;
+}
 .note h1 {
+  color: #ddd;
   font-size: 1.2rem;
   margin: auto;
   max-height: 1.2rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 90%;
+  width: hidden;
 }
 .note p {
   color: #aaa;
   font-size: 0.8rem;
   height: 4.9rem;
-  margin: 5px auto;
+  margin: 0.4rem auto;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 95%;
@@ -168,27 +191,6 @@ body {
 .note .button:hover {
   background-color: #6BDF5E;
   color: #17700D;
-}
-.note .edit {
-  background-color: #222;
-  border: solid 2px #2DD91A;
-  border-radius: 0.3rem;
-  color: #2DD91A;
-  cursor: pointer;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0.3rem 0.9rem;
-  outline: 0;
-  bottom: -0.9rem;
-  left: 50%;
-  margin-left: -2rem;
-  position: absolute;
-}
-.note .edit:hover {
-  background-color: #000;
-  color: #2DD91A;
 }
 
 .modal {

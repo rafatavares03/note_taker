@@ -4,9 +4,9 @@
 
 * {
   @include abs.scrollbar;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: abs.$box-sizing-default;
+  margin: abs.$no-margin;
+  padding: abs.$no-padding;
 }
 
 body {

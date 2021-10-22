@@ -26,7 +26,7 @@
   }
 }
 
-@mixin remove-button() {
+@mixin remove-button {
   .remove {
     background-color: var.$remove-button-bg-color;
     border: var.$remove-button-border;
@@ -44,6 +44,16 @@
       border: var.$remove-button-border-hover;
       color: var.$remove-button-bg-color-hover;
     }
+  }
+}
+
+@mixin edit-button {
+  .edit {
+    @include button-style(var.$edit-button-bg-color-hover, var.$edit-button-color-hover, var.$no-margin);
+    bottom: var.$edit-button-bottom;
+    left: var.$edit-button-left;
+    margin-left: var.$edit-button-margin-left;
+    position: var.$edit-button-position;
   }
 }
 
@@ -70,7 +80,7 @@
 
     textarea {
       @include inputs;
-      height: 6rem;
+      height: var.$textarea-height;
       overflow-y: auto;
       resize: var.$no-resize;
     }
@@ -109,7 +119,7 @@
       max-width: var.$form-max-width;
 
       .note {
-        max-width: 30%;
+        max-width: var.$note-max-width;
       }
     }
   }

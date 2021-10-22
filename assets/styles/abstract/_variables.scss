@@ -14,6 +14,7 @@ $black: #000;
 
 
 
+$box-sizing-default: border-box;
 $no-border: 0;
 $no-margin: 0;
 $no-outline: 0;
@@ -28,6 +29,22 @@ $font-bold: 700;
 $font-semi-bold: 600;
 
 
+
+
+
+$container-min-height: 100vh;
+$container-padding: 0.5rem;
+$container-text-align: center;
+$container-width: 100%;
+
+
+$container-h1-font-size: calc(2rem + 2vw);
+$container-h1-font-style: italic;
+$container-h1-font-weight: 600;
+
+
+$container-p-font-size: calc(1.1rem + 0.5vw);
+$container-p-margin: 0.5rem 0rem 0.9rem 0rem;
 
 
 $body-bg-color: $dark-green;
@@ -49,13 +66,17 @@ $button-padding: 0.3rem 0.9rem;
 $default-border: solid 2px $green;
 
 
+$edit-button-bg-color-hover: $black;
+$edit-button-bottom: -0.9rem;
+$edit-button-color-hover: $green;
+$edit-button-left: 50%;
+$edit-button-margin-left: -2rem;
+$edit-button-position: absolute;
+
+
 $form-button-margin: 1rem;
 $form-max-width: 100ch;
 $form-width: 100%;
-
-
-$edit-button-bg-color-hover: $black;
-$edit-button-color-hover: $green;
 
 
 $input-bg-color: $dark-grey;
@@ -66,9 +87,41 @@ $input-padding: 0.6rem;
 $input-width: 100%;
 
 
-$notes-area-border: solid 2px $green;
-$notes-button-margin: 0.2rem 0rem 0.3rem 0rem;
-$notes-shadow: 0px 0px 5px 3px $green;
+$note-button-margin: 0.2rem 0rem 0.3rem 0rem;
+$note-margin: 0.9rem;
+$note-max-width: 30%;
+$note-padding: 1rem 0.3rem;
+$note-position: relative;
+$note-shadow: 0px 0px 5px 3px $green;
+$note-width: 85%;
+
+
+$note-h1-color: $light-grey;
+$note-h1-font-size: 1.2rem;
+$note-h1-margin: auto;
+$note-h1-max-height: 1.2rem;
+$note-h1-overflow: hidden;
+$note-h1-text-overflow: ellipsis;
+$note-h1-width: 90%;
+
+
+$note-p-color: $grey;
+$note-p-font-size: 0.8rem;
+$note-p-height: 4.9rem;
+$note-p-margin: 0.4rem auto;
+$note-p-overflow: hidden;
+$note-p-text-overflow: ellipsis;
+$note-p-width: 95%;
+$note-p-white-space: pre-wrap;
+$note-p-word-break: break-all;
+
+
+$notes-area-bg-color: $dark-grey;
+$notes-area-flex-wrap: wrap;
+$notes-area-height: 250px;
+$notes-area-overflow: auto;
+$notes-area-padding: 0.3rem 0rem 0.5rem 0rem;
+$notes-area-width: 100%;
 
 
 $remove-button-bg-color: $black;
@@ -88,3 +141,6 @@ $remove-button-top: -0.7rem;
 $scrollbar-bg-color: $very-transparent-black;
 $scrollbar-color: $light-green;
 $scrollbar-width: 0.4rem;
+
+
+$textarea-height: 6rem;
