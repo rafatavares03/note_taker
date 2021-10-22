@@ -277,40 +277,41 @@ body {
     max-width: 120ch;
     height: calc(20rem + 10vh);
   }
-}
-.note {
-  padding: 1rem 0.3rem 2.5rem 0.3rem;
-}
-.note .remove {
-  font-size: 1.5rem;
-  left: -1.5rem;
-  padding: 0.5rem 1rem;
-  top: -1.2rem;
-}
-.note .button {
-  font-size: 1.5rem;
-}
-.note .edit {
-  font-size: 1.5rem;
-  margin-left: -3rem;
-}
-.note h1 {
-  font-size: 2.3rem;
-  max-height: 2.3rem;
-}
-.note p {
-  font-size: 1.5rem;
-  height: 7rem;
-}
 
-.modal h1 {
-  font-size: 3rem;
-}
-.modal #closePop-Up {
-  font-size: 2.5rem;
-}
-.modal #modal-content {
-  font-size: 2.2rem;
+  .note {
+    padding: 1rem 0.3rem 2.5rem 0.3rem;
+  }
+  .note .remove {
+    font-size: 1.5rem;
+    left: -1.5rem;
+    padding: 0.5rem 1rem;
+    top: -1.2rem;
+  }
+  .note .button {
+    font-size: 1.5rem;
+  }
+  .note .edit {
+    font-size: 1.5rem;
+    margin-left: -3rem;
+  }
+  .note h1 {
+    font-size: 2.3rem;
+    max-height: 2.3rem;
+  }
+  .note p {
+    font-size: 1.5rem;
+    height: 7rem;
+  }
+
+  .modal h1 {
+    font-size: 3rem;
+  }
+  .modal #closePop-Up {
+    font-size: 2.5rem;
+  }
+  .modal #modal-content {
+    font-size: 2.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
